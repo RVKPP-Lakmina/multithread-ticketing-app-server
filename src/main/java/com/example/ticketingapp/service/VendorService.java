@@ -1,5 +1,4 @@
 package com.example.ticketingapp.service;
 
-public interface CustomerService {
-
+public interface VendorService {
 }
