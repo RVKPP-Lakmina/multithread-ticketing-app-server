@@ -3,7 +3,7 @@ package com.example.ticketingapp.service.impl;
 import com.example.ticketingapp.exception.InvalidDataException;
 import com.example.ticketingapp.model.User;
 import com.example.ticketingapp.repository.UserRepository;
-import com.example.ticketingapp.service.UserService;
+import com.example.ticketingapp.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

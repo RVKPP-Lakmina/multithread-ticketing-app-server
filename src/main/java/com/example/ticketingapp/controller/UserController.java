@@ -2,7 +2,7 @@ package com.example.ticketingapp.controller;
 
 import com.example.ticketingapp.exception.InvalidDataException;
 import com.example.ticketingapp.model.User;
-import com.example.ticketingapp.service.UserService;
+import com.example.ticketingapp.service.interfaces.UserService;
 import com.example.ticketingapp.util.GlobalLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

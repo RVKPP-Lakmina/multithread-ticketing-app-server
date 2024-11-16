@@ -1,50 +1,45 @@
 package com.example.ticketingapp.model;
 
-import com.example.ticketingapp.util.GlobalLogger;
-
-import java.util.Date;
-
 public class Ticket {
-    private int ticketID;
-    private double ticketPrice;
-    private Boolean isAvailable;
-    private Date timesStamp;
+    private int id;
+    private String description;
+    private int price;
 
-    public Ticket(int ticketID, double ticketPrice, Boolean isAvailable, Date timesStamp) {
-        this.ticketID = ticketID;
-        this.ticketPrice = ticketPrice;
-        this.isAvailable = isAvailable;
-        this.timesStamp = timesStamp;
+    public Ticket() {
     }
 
-    public int getTicketID() {
-        return ticketID;
+    public Ticket(int id, String description, int price) {
+        this.id = id;
+        this.description = description;
+        this.price = price;
     }
 
-    public double getTicketPrice() {
-        return ticketPrice;
+    public Ticket(String description, int price) {
+        this.description = description;
+        this.price = price;
     }
 
-    public void setTicketPrice(double ticketPrice) {
-        this.ticketPrice = ticketPrice;
-        GlobalLogger.logInfo(this.ticketID + "Ticket price set to " + ticketPrice);
+    public int getId() {
+        return id;
     }
 
-    public Boolean getAvailable() {
-        return isAvailable;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setAvailable(Boolean available) {
-        isAvailable = available;
-        GlobalLogger.logInfo(this.ticketID + "Ticket available set to " + isAvailable);
+    public String getDescription() {
+        return description;
     }
 
-    public Date getTimesStamp() {
-        return timesStamp;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public void setTimesStamp(Date timesStamp) {
-        this.timesStamp = timesStamp;
-        GlobalLogger.logInfo(this.ticketID + "Ticket time set to " + timesStamp);
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

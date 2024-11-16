@@ -1,4 +1,4 @@
-package com.example.ticketingapp.service;
+package com.example.ticketingapp.service.interfaces;
 
 import com.example.ticketingapp.model.User;
 
