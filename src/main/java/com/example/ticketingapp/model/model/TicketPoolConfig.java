@@ -9,4 +9,5 @@ public class TicketPoolConfig {
     private int maxTicketCapacity;
     private int ticketReleaseRate;
     private int customerRetrievalRate;
+    private int totalTickets;
 }

@@ -28,4 +28,10 @@ public class GlobalExceptionHandler {
         GlobalLogger.logError(e.getMessage(), e);
         return new ResponseEntity<>("Input output Error", HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @ExceptionHandler(InterruptedException.class)
+    public ResponseEntity<String> handleException(InterruptedException e) {
+        GlobalLogger.logError(e.getMessage(), e);
+        return new ResponseEntity<>("Thread Interrupted", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }

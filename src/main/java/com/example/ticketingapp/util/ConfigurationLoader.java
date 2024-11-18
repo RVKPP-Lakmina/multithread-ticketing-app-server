@@ -19,13 +19,9 @@ public class ConfigurationLoader {
         try {
             Configurations configurations = new Configurations("ticketingAppConfiguration");
             configs = configurations.readFile();
-
-            System.out.println(configs);
-
         } catch (Exception e) {
             throw new RuntimeException("something went wrong | ConfigurationLoader | config  ", e);
         }
-
     }
 
     public static void reloadConfig() {

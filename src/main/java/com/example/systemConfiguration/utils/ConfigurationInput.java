@@ -18,4 +18,28 @@ public class ConfigurationInput {
             return userPromptForValues(parameter);
         }
     }
+
+    public String promptForString(String prompt) {
+        try {
+            System.out.printf("\n%s: ", prompt);
+            return scanner.nextLine();
+        } catch (Exception e) {
+            Banner.errorBanner("Invalid input. Please try again.");
+            scanner.nextLine();
+            return promptForString(prompt);
+        }
+    }
+
+    public int promptForInt(String prompt) {
+        try {
+            System.out.printf("\n%s: ", prompt);
+            int userInput = scanner.nextInt();
+            scanner.nextLine();
+            return userInput;
+        } catch (Exception e) {
+            Banner.errorBanner("Invalid input. Please try again.");
+            scanner.nextLine();
+            return promptForInt(prompt);
+        }
+    }
 }

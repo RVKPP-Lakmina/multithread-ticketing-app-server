@@ -1,0 +1,679 @@
+2024-11-16 11:38:24 [restartedMain] INFO  c.e.t.TicketingappApplication - Starting TicketingappApplication using Java 17.0.12 with PID 10800 (C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\build\classes\java\main started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server)
+2024-11-16 11:38:24 [restartedMain] INFO  c.e.t.TicketingappApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-16 11:38:24 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-16 11:38:24 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-16 11:38:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-11-16 11:38:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 1 MongoDB repository interface.
+2024-11-16 11:38:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-16 11:38:25 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-16 11:38:25 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-16 11:38:25 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-16 11:38:25 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-16 11:38:25 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1116 ms
+2024-11-16 11:41:54 [restartedMain] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "ticketing-app-cluster"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='ticketingapp', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@51ba6aa2, com.mongodb.Jep395RecordCodecProvider@6c5d71db, com.mongodb.KotlinCodecProvider@24303f9c]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=ticketing-app-cluster.ippit.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi6sw-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='ticketing-app-cluster', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-11-16 11:41:54 [cluster-ClusterId{value='673837aa6ec2472099cd42a8', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 11:41:54 [cluster-ClusterId{value='673837aa6ec2472099cd42a8', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 11:41:54 [cluster-ClusterId{value='673837aa6ec2472099cd42a8', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 11:41:54 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-16 11:41:55 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-16 11:41:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-16 11:41:55 [restartedMain] INFO  c.e.t.TicketingappApplication - Started TicketingappApplication in 211.633 seconds (process running for 213.89)
+2024-11-16 11:41:55 [cluster-ClusterId{value='673837aa6ec2472099cd42a8', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=312854600, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671ce9c7c914420c4fe7712f, counter=4}, lastWriteDate=Sat Nov 16 11:41:53 IST 2024, lastUpdateTimeNanos=116622348513300}
+2024-11-16 11:41:55 [cluster-ClusterId{value='673837aa6ec2472099cd42a8', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=312375500, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001b, setVersion=4, topologyVersion=TopologyVersion{processId=671cea1881712e795921261f, counter=6}, lastWriteDate=Sat Nov 16 11:41:53 IST 2024, lastUpdateTimeNanos=116622348676900}
+2024-11-16 11:41:55 [cluster-ClusterId{value='673837aa6ec2472099cd42a8', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=328446000, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671cea6916131197e21c94a8, counter=3}, lastWriteDate=Sat Nov 16 11:41:53 IST 2024, lastUpdateTimeNanos=116622348513200}
+2024-11-16 11:41:55 [cluster-ClusterId{value='673837aa6ec2472099cd42a8', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001b and max set version 4
+2024-11-16 11:43:50 [http-nio-8080-exec-7] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-16 11:43:50 [http-nio-8080-exec-7] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-16 11:43:50 [http-nio-8080-exec-7] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-16 11:47:40 [restartedMain] INFO  c.e.t.TicketingappApplication - Starting TicketingappApplication using Java 17.0.12 with PID 13420 (C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\build\classes\java\main started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server)
+2024-11-16 11:47:40 [restartedMain] INFO  c.e.t.TicketingappApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-16 11:47:40 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-16 11:47:40 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-16 11:47:41 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-11-16 11:47:41 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 1 MongoDB repository interface.
+2024-11-16 11:47:41 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-16 11:47:41 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-16 11:47:41 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-16 11:47:41 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-16 11:47:41 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-16 11:47:41 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1069 ms
+2024-11-16 11:47:47 [restartedMain] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "ticketing-app-cluster"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='ticketingapp', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@69e2ffaa, com.mongodb.Jep395RecordCodecProvider@78cd64bd, com.mongodb.KotlinCodecProvider@535c3c]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=ticketing-app-cluster.ippit.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi6sw-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='ticketing-app-cluster', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-11-16 11:47:48 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 11:47:48 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 11:47:48 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 11:47:48 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-16 11:47:48 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=298630700, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671ce9c7c914420c4fe7712f, counter=4}, lastWriteDate=Sat Nov 16 11:47:46 IST 2024, lastUpdateTimeNanos=116975456656800}
+2024-11-16 11:47:48 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=298565400, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001b, setVersion=4, topologyVersion=TopologyVersion{processId=671cea1881712e795921261f, counter=6}, lastWriteDate=Sat Nov 16 11:47:46 IST 2024, lastUpdateTimeNanos=116975456591800}
+2024-11-16 11:47:48 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=309009700, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671cea6916131197e21c94a8, counter=3}, lastWriteDate=Sat Nov 16 11:47:46 IST 2024, lastUpdateTimeNanos=116975456493600}
+2024-11-16 11:47:48 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001b and max set version 4
+2024-11-16 11:47:48 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-16 11:47:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-16 11:47:48 [restartedMain] INFO  c.e.t.TicketingappApplication - Started TicketingappApplication in 8.9 seconds (process running for 9.796)
+2024-11-16 12:39:34 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:707)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:583)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:428)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:381)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:176)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:196)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:716)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:580)
+	... 5 common frames omitted
+2024-11-16 12:39:34 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:707)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:583)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:428)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:381)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:176)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:196)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:716)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:580)
+	... 5 common frames omitted
+2024-11-16 12:39:34 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:707)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:583)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:428)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:381)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:176)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:196)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:716)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:580)
+	... 5 common frames omitted
+2024-11-16 12:39:35 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=422043800, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001b, setVersion=4, topologyVersion=TopologyVersion{processId=671cea1881712e795921261f, counter=6}, lastWriteDate=Sat Nov 16 12:39:34 IST 2024, lastUpdateTimeNanos=120082585997700}
+2024-11-16 12:39:35 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=422034500, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671ce9c7c914420c4fe7712f, counter=4}, lastWriteDate=Sat Nov 16 12:39:34 IST 2024, lastUpdateTimeNanos=120082585958200}
+2024-11-16 12:39:35 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=421851700, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671cea6916131197e21c94a8, counter=3}, lastWriteDate=Sat Nov 16 12:39:34 IST 2024, lastUpdateTimeNanos=120082585958200}
+2024-11-16 12:39:35 [cluster-ClusterId{value='6738390b84ca1506e862704b', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001b and max set version 4
+2024-11-16 12:43:54 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2024-11-16 12:43:54 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-16 12:43:55 [restartedMain] INFO  c.e.t.TicketingappApplication - Starting TicketingappApplication using Java 17.0.12 with PID 13420 (C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\build\classes\java\main started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server)
+2024-11-16 12:43:55 [restartedMain] INFO  c.e.t.TicketingappApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-16 12:43:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-11-16 12:43:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 1 MongoDB repository interface.
+2024-11-16 12:43:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-16 12:43:55 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-16 12:43:55 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-16 12:43:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-16 12:43:55 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-16 12:43:55 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 290 ms
+2024-11-16 12:43:55 [restartedMain] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "ticketing-app-cluster"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='ticketingapp', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@69e2ffaa, com.mongodb.Jep395RecordCodecProvider@78cd64bd, com.mongodb.KotlinCodecProvider@535c3c]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=ticketing-app-cluster.ippit.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi6sw-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='ticketing-app-cluster', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-11-16 12:43:55 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-16 12:43:55 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-16 12:43:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-16 12:43:55 [restartedMain] INFO  c.e.t.TicketingappApplication - Started TicketingappApplication in 0.615 seconds (process running for 3376.862)
+2024-11-16 12:43:55 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-16 12:43:55 [cluster-ClusterId{value='6738463384ca1506e862704c', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 12:43:55 [cluster-ClusterId{value='6738463384ca1506e862704c', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 12:43:55 [cluster-ClusterId{value='6738463384ca1506e862704c', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 12:43:56 [cluster-ClusterId{value='6738463384ca1506e862704c', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=636259700, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671ce9c7c914420c4fe7712f, counter=4}, lastWriteDate=Sat Nov 16 12:43:53 IST 2024, lastUpdateTimeNanos=120343470090200}
+2024-11-16 12:43:56 [cluster-ClusterId{value='6738463384ca1506e862704c', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=671155100, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001b, setVersion=4, topologyVersion=TopologyVersion{processId=671cea1881712e795921261f, counter=6}, lastWriteDate=Sat Nov 16 12:43:53 IST 2024, lastUpdateTimeNanos=120343496955900}
+2024-11-16 12:43:56 [cluster-ClusterId{value='6738463384ca1506e862704c', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001b and max set version 4
+2024-11-16 12:43:56 [cluster-ClusterId{value='6738463384ca1506e862704c', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=659238700, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671cea6916131197e21c94a8, counter=3}, lastWriteDate=Sat Nov 16 12:43:54 IST 2024, lastUpdateTimeNanos=120343498187700}
+2024-11-16 12:44:08 [restartedMain] INFO  c.e.t.TicketingappApplication - Starting TicketingappApplication using Java 17.0.12 with PID 6932 (C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\build\classes\java\main started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server)
+2024-11-16 12:44:08 [restartedMain] INFO  c.e.t.TicketingappApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-16 12:44:08 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-16 12:44:08 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-16 12:44:08 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-11-16 12:44:08 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 1 MongoDB repository interface.
+2024-11-16 12:44:09 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-16 12:44:09 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-16 12:44:09 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-16 12:44:09 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-16 12:44:09 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-16 12:44:09 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1033 ms
+2024-11-16 12:44:09 [restartedMain] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "ticketing-app-cluster"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='ticketingapp', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@47b5a02b, com.mongodb.Jep395RecordCodecProvider@e9a5324, com.mongodb.KotlinCodecProvider@2ed0c4db]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=ticketing-app-cluster.ippit.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi6sw-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='ticketing-app-cluster', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-11-16 12:44:09 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 12:44:09 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 12:44:09 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 12:44:10 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-16 12:44:10 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=145496100, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671ce9c7c914420c4fe7712f, counter=4}, lastWriteDate=Sat Nov 16 12:44:08 IST 2024, lastUpdateTimeNanos=120357200068200}
+2024-11-16 12:44:10 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=228761700, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671cea6916131197e21c94a8, counter=3}, lastWriteDate=Sat Nov 16 12:44:08 IST 2024, lastUpdateTimeNanos=120357199884300}
+2024-11-16 12:44:10 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=188406300, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001b, setVersion=4, topologyVersion=TopologyVersion{processId=671cea1881712e795921261f, counter=6}, lastWriteDate=Sat Nov 16 12:44:08 IST 2024, lastUpdateTimeNanos=120357251305600}
+2024-11-16 12:44:10 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001b and max set version 4
+2024-11-16 12:44:10 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-16 12:44:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-16 12:44:10 [restartedMain] INFO  c.e.t.TicketingappApplication - Started TicketingappApplication in 2.775 seconds (process running for 3.312)
+2024-11-16 12:45:31 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-16 12:45:31 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-16 12:45:31 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-16 13:01:01 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:705)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:583)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:428)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:381)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:176)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:196)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:716)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:580)
+	... 5 common frames omitted
+2024-11-16 13:01:01 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=157884900, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671ce9c7c914420c4fe7712f, counter=4}, lastWriteDate=Sat Nov 16 13:00:59 IST 2024, lastUpdateTimeNanos=121368566567000}
+2024-11-16 13:01:11 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:705)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:583)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:428)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:381)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:176)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:196)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:716)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:580)
+	... 5 common frames omitted
+2024-11-16 13:01:11 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=147933000, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671cea6916131197e21c94a8, counter=3}, lastWriteDate=Sat Nov 16 13:01:09 IST 2024, lastUpdateTimeNanos=121378619320800}
+2024-11-16 13:01:14 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:705)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:583)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:428)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:381)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:176)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:196)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:716)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:580)
+	... 5 common frames omitted
+2024-11-16 13:01:14 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=506153600, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001b, setVersion=4, topologyVersion=TopologyVersion{processId=671cea1881712e795921261f, counter=6}, lastWriteDate=Sat Nov 16 13:01:12 IST 2024, lastUpdateTimeNanos=121381724578900}
+2024-11-16 13:01:14 [cluster-ClusterId{value='67384641417d8743650d1628', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001b and max set version 4
+2024-11-16 13:11:29 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 4 class path changes (0 additions, 4 deletions, 0 modifications)
+2024-11-16 13:11:29 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-16 13:11:30 [restartedMain] INFO  c.e.t.TicketingappApplication - Starting TicketingappApplication using Java 17.0.12 with PID 6932 (C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\build\classes\java\main started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server)
+2024-11-16 13:11:30 [restartedMain] INFO  c.e.t.TicketingappApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-16 13:11:31 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-11-16 13:11:31 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 1 MongoDB repository interface.
+2024-11-16 13:11:31 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-16 13:11:31 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-16 13:11:31 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-16 13:11:31 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-16 13:11:31 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-16 13:11:31 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1048 ms
+2024-11-16 13:11:32 [restartedMain] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "ticketing-app-cluster"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='ticketingapp', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@47b5a02b, com.mongodb.Jep395RecordCodecProvider@e9a5324, com.mongodb.KotlinCodecProvider@2ed0c4db]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=ticketing-app-cluster.ippit.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi6sw-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='ticketing-app-cluster', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-11-16 13:11:32 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-16 13:11:32 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-16 13:11:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-16 13:11:32 [restartedMain] INFO  c.e.t.TicketingappApplication - Started TicketingappApplication in 1.922 seconds (process running for 1645.216)
+2024-11-16 13:11:32 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-16 13:11:32 [cluster-ClusterId{value='67384cac417d8743650d1629', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 13:11:32 [cluster-ClusterId{value='67384cac417d8743650d1629', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 13:11:32 [cluster-ClusterId{value='67384cac417d8743650d1629', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 13:11:32 [cluster-ClusterId{value='67384cac417d8743650d1629', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=212767200, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671cea6916131197e21c94a8, counter=3}, lastWriteDate=Sat Nov 16 13:11:31 IST 2024, lastUpdateTimeNanos=121999657174800}
+2024-11-16 13:11:32 [cluster-ClusterId{value='67384cac417d8743650d1629', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=215829800, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001b, setVersion=4, topologyVersion=TopologyVersion{processId=671cea1881712e795921261f, counter=6}, lastWriteDate=Sat Nov 16 13:11:31 IST 2024, lastUpdateTimeNanos=121999675872400}
+2024-11-16 13:11:32 [cluster-ClusterId{value='67384cac417d8743650d1629', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001b and max set version 4
+2024-11-16 13:11:32 [cluster-ClusterId{value='67384cac417d8743650d1629', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=245623500, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671ce9c7c914420c4fe7712f, counter=4}, lastWriteDate=Sat Nov 16 13:11:31 IST 2024, lastUpdateTimeNanos=121999733656300}
+2024-11-16 13:11:33 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 4 class path changes (4 additions, 0 deletions, 0 modifications)
+2024-11-16 13:11:33 [Thread-10] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2024-11-16 13:11:34 [restartedMain] INFO  c.e.t.TicketingappApplication - Starting TicketingappApplication using Java 17.0.12 with PID 6932 (C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\build\classes\java\main started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server)
+2024-11-16 13:11:34 [restartedMain] INFO  c.e.t.TicketingappApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-16 13:11:34 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-11-16 13:11:34 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 1 MongoDB repository interface.
+2024-11-16 13:11:34 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-16 13:11:34 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-16 13:11:34 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-16 13:11:34 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-16 13:11:34 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-16 13:11:34 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 184 ms
+2024-11-16 13:11:34 [restartedMain] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "ticketing-app-cluster"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.12+8-LTS-286"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='ticketingapp', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@47b5a02b, com.mongodb.Jep395RecordCodecProvider@e9a5324, com.mongodb.KotlinCodecProvider@2ed0c4db]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=ticketing-app-cluster.ippit.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi6sw-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='ticketing-app-cluster', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-11-16 13:11:34 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-16 13:11:34 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 13:11:34 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 13:11:34 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017 to client view of cluster
+2024-11-16 13:11:34 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-16 13:11:34 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-16 13:11:34 [restartedMain] INFO  c.e.t.TicketingappApplication - Started TicketingappApplication in 0.373 seconds (process running for 1647.445)
+2024-11-16 13:11:34 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-16 13:11:34 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=199718300, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001b, setVersion=4, topologyVersion=TopologyVersion{processId=671cea1881712e795921261f, counter=6}, lastWriteDate=Sat Nov 16 13:11:33 IST 2024, lastUpdateTimeNanos=122001672966400}
+2024-11-16 13:11:34 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001b and max set version 4
+2024-11-16 13:11:34 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=195118600, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671ce9c7c914420c4fe7712f, counter=4}, lastWriteDate=Sat Nov 16 13:11:33 IST 2024, lastUpdateTimeNanos=122001674739800}
+2024-11-16 13:11:34 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=187320200, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=671cea6916131197e21c94a8, counter=3}, lastWriteDate=Sat Nov 16 13:11:33 IST 2024, lastUpdateTimeNanos=122001675459700}
+2024-11-16 22:35:12 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:707)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:583)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:428)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:381)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:176)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:196)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:716)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:580)
+	... 5 common frames omitted
+2024-11-16 22:35:12 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:707)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:583)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:428)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:381)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:176)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:196)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:716)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:580)
+	... 5 common frames omitted
+2024-11-16 22:35:12 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:707)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:583)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:428)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:381)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:176)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:196)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:716)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:580)
+	... 5 common frames omitted
+2024-11-16 22:35:12 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:35:12 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:35:12 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:36:33 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:36:43 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-02.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-02.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:36:53 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:37:03 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:37:13 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-00.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-00.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:37:33 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:37:43 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:37:53 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:38:13 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-02.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-02.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:38:43 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:39:13 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:39:33 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted
+2024-11-16 22:40:23 [cluster-ClusterId{value='67384cae417d8743650d162a', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:101)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:80)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:201)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:933)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1532)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1384)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 6 common frames omitted

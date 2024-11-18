@@ -2,7 +2,9 @@ package com.example.ticketingapp.controller;
 
 import com.example.ticketingapp.component.interfaces.TicketPoolOperations;
 import com.example.ticketingapp.threading.Consumer;
+import com.example.ticketingapp.threading.MonitorTicketPool;
 import com.example.ticketingapp.threading.Vendor;
+import com.example.ticketingapp.websocket.TicketPoolWebSocketHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +26,27 @@ public class TicketController {
     public TicketController(TicketPoolOperations ticketPool, Vendor producer, Consumer consumer) {
         new Thread(producer).start();
         new Thread(consumer).start();
+        TicketPoolWebSocketHandler webSocketHandler = new TicketPoolWebSocketHandler();
+        this.monitorTicketPool(webSocketHandler, ticketPool);
+    }
+
+    public void monitorTicketPool(TicketPoolWebSocketHandler webSocketHandler, TicketPoolOperations ticketPool) {
+        new Thread(() -> {
+            while (true) {
+                String status = getTicketPoolStatus(ticketPool); // Method to get current status of the ticket pool
+                webSocketHandler.broadcast(status);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }).start();
+    }
+
+    private String getTicketPoolStatus(TicketPoolOperations ticketPool) {
+        // Logic to generate a string representation of the ticket pool status
+        return "Current Ticket Pool Status: " + ticketPool.getTicketCount(); // Example output
     }
 
     @PostMapping("/add")
