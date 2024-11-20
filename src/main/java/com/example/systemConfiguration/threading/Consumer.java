@@ -14,12 +14,14 @@ public class Consumer implements Runnable {
     private final int customerRetrievalRate;
     private volatile boolean running = true;
     private final int totalTicket;
+    private final int totalTicketPurchased;
 
     public Consumer(TicketPoolOperations ticketPool, Queue<Integer> requestQueue) {
         this.ticketPool = ticketPool;
         this.requestQueue = requestQueue; // 10
         this.customerRetrievalRate = ConfigurationLoader.getConfig().getCustomerRetrievalRate();
         this.totalTicket = ConfigurationLoader.getConfig().getTotalTickets();
+        this.totalTicketPurchased = Store.getPurchasedTickets().size();
     }
 
     @Override
@@ -51,6 +53,13 @@ public class Consumer implements Runnable {
 
     private void purchaseTickets(int requestedTickets) {
 
+        boolean hasTicket = (totalTicketPurchased + requestedTickets) <= this.totalTicket;
+
+        if (!hasTicket) {
+            System.out.println("No Tickets left to process");
+            return;
+        }
+
         int ticketsToBuy = Math.min(customerRetrievalRate, requestedTickets);
 
         for (int i = 0; i < ticketsToBuy; i++) {
@@ -63,7 +72,7 @@ public class Consumer implements Runnable {
     }
 
     public void stop() {
-        running = false; // Set the flag to false to stop the loop
+        running = false; // Set the flag too false to stop the loop
     }
 
     private void sleepForMoment() {

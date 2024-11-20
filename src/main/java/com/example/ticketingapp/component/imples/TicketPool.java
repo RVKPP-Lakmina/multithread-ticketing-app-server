@@ -10,14 +10,23 @@ import java.util.List;
 
 @Component
 public class TicketPool extends AbstractTicketPool {
+    private final List<Ticket> ticketsPurchased;
+    private final int totalTickets;
+
 
     public TicketPool() {
         super(ConfigurationLoader.getConfig().getMaxTicketCapacity());
+        ticketsPurchased = Store.getPurchasedTickets();
+        totalTickets = ConfigurationLoader.getConfig().getTotalTickets();
     }
 
     @Override
     public boolean addTickets(int count) {
         synchronized (this) {
+            if (ticketsPurchased.size() == totalTickets) {
+                return false;
+            }
+
             if (tickets.size() + count <= maxTicketCapacity) {
 
                 for (int i = 0; i < count; i++) {
@@ -36,8 +45,6 @@ public class TicketPool extends AbstractTicketPool {
 
     @Override
     public boolean buyTicket() {
-        List<Ticket> ticketsPurchased = Store.getPurchasedTickets();
-        int totalTickets = ConfigurationLoader.getConfig().getTotalTickets();
 
         synchronized (this) {
             while (tickets.isEmpty()) {
@@ -60,6 +67,8 @@ public class TicketPool extends AbstractTicketPool {
             if (ticket != null) {
                 Store.addPurchasedTickets(ticket);
                 System.out.println("Ticket purchased successfully. Remaining tickets: " + tickets.size());
+                System.out.printf("**** issued Tickets: %d    ****", Store.getPurchasedTickets().size());
+                System.out.println(" ");
                 return true;
             }
             System.out.println("No tickets available for purchase.");
