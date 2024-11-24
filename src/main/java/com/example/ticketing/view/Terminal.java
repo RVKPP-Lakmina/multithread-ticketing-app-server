@@ -1,6 +1,8 @@
 package com.example.ticketing.view;
 
 import com.example.ticketing.controller.SimulationTask;
+import com.example.ticketing.controller.interfaces.TicketingSystemSimulator;
+
 import java.util.Scanner;
 
 public class Terminal {
@@ -21,7 +23,7 @@ public class Terminal {
             System.out.print("Enter max ticket capacity: ");
             int maxCapacity = scanner.nextInt();
             scanner.nextLine();
-            SimulationTask simulation = new SimulationTask(totalTickets, maxCapacity);
+            TicketingSystemSimulator simulation = new SimulationTask(totalTickets, maxCapacity);
 
             System.out.println("\nType 'tsc --help' for a list of commands.\n");
 
@@ -31,9 +33,24 @@ public class Terminal {
 
                 String[] parts = command.split(" ");
 
+                if (parts.length == 0) {
+                    continue;
+                }
+
                 if (parts[0].equalsIgnoreCase("exit")) {
                     simulation.shutdownSystem();
                     break;
+                }
+
+                if (parts[0].equalsIgnoreCase("restart")) {
+                    System.out.println("Restarting the system...");
+                    simulation.shutdownSystem();
+                    Thread.sleep(2000);
+                    System.out.println("");
+                    System.out.println("""
+                            Starting the system...
+                            """);
+                    new Terminal().run();
                 }
 
                 if (!parts[0].equalsIgnoreCase("tsc")) {
@@ -44,6 +61,12 @@ public class Terminal {
 
                 try {
                     switch (parts[1]) {
+                        // case "start":
+                        // simulation.startTask();
+                        // break;
+                        // case "stop":
+                        // simulation.stopTask();
+                        // break;
                         case "add-vendor":
                             simulation.addVendor(parts[2], Integer.parseInt(parts[3]));
                             break;

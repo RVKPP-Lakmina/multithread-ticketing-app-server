@@ -4,8 +4,8 @@ import com.example.ticketing.util.LoggerService;
 
 public class VIPCustomer extends Customer {
 
-    public VIPCustomer(TicketPool ticketPool, int retrievalRate, LoggerService logger) {
-        super(ticketPool, retrievalRate, logger);
+    public VIPCustomer(ConcurrentTicketStore ticketPool, int retrievalRate, String name, LoggerService logger) {
+        super(ticketPool, retrievalRate, name, logger);
     }
 
     @Override

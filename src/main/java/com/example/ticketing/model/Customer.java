@@ -1,34 +1,54 @@
 package com.example.ticketing.model;
 
+import com.example.ticketing.enumeration.TicketStatusEnum;
+import com.example.ticketing.model.implementations.ProducerConsumerThread;
+import com.example.ticketing.model.interfaces.ITicketPool;
 import com.example.ticketing.util.LoggerService;
 
-public class Customer implements Runnable {
-    private final TicketPool ticketPool;
-    private final int retrievalRate;
-    private final LoggerService logger;
+public class Customer extends ProducerConsumerThread {
 
-    public Customer(TicketPool ticketPool, int retrievalRate, LoggerService logger) {
-        this.ticketPool = ticketPool;
-        this.retrievalRate = retrievalRate;
-        this.logger = logger;
+    public Customer(
+            ITicketPool ticketPool,
+            int retrievalRate,
+            String customerName,
+            LoggerService logger) {
+
+        super(
+                ticketPool,
+                logger,
+                retrievalRate,
+                customerName);
     }
 
     @Override
-    public void run() {
-        while (!Thread.currentThread().isInterrupted()) {
-            boolean success = ticketPool.removeTickets(retrievalRate);
-            if (success) {
-                logger.log(Thread.currentThread().getName() + " purchased " + retrievalRate + " tickets.");
-            } else {
-                logger.log(Thread.currentThread().getName() + " failed to purchase tickets.");
+    public void process() {
+        ITicketPool ticketPool = this.getTicketPool();
+        LoggerService logger = this.getLogger();
+        TicketStatusEnum success = ticketPool.purchaseTickets(getRate());
+
+        switch (success) {
+            case FULL:
+                logger.log("Pool is full. Customer " + getName() + " is waiting.");
                 break;
-            }
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
+            case EMPTY:
+                logger.log("Sold out!");
+                Thread.currentThread().interrupt(); // Mark thread as interrupted
+                break; // Exit loop
+            case ERROR:
+                logger.log("An error occurred while removing tickets.");
+                break;
+            case SUCCESS:
+                logger.log("Tickets are purchased successfully by " + getName());
+                break;
+            case NOTENOUGH:
+                logger.log(
+                        "Not enough tickets to purchase. Only " + ticketPool.getPoolTickets() + " tickets left.");
                 Thread.currentThread().interrupt();
                 break;
-            }
+            default:
+                logger.log("An unexpected error occurred.");
+                break;
         }
     }
+
 }

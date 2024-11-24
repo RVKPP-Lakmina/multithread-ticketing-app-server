@@ -1,34 +1,41 @@
 package com.example.ticketing.model;
 
+import com.example.ticketing.enumeration.TicketStatusEnum;
+import com.example.ticketing.model.implementations.ProducerConsumerThread;
+import com.example.ticketing.model.interfaces.ITicketPool;
 import com.example.ticketing.util.LoggerService;
 
-public class Vendor implements Runnable {
-    private final TicketPool ticketPool;
-    private final int releaseRate;
-    private final LoggerService logger;
+public class Vendor extends ProducerConsumerThread {
 
-    public Vendor(TicketPool ticketPool, int releaseRate, LoggerService logger) {
-        this.ticketPool = ticketPool;
-        this.releaseRate = releaseRate;
-        this.logger = logger;
+    public Vendor(ITicketPool ticketPool, int releaseRate, String vendorName, LoggerService logger) {
+        super(ticketPool, logger, releaseRate, vendorName);
     }
 
     @Override
-    public void run() {
-        while (!Thread.currentThread().isInterrupted()) {
-            boolean success = ticketPool.addTickets(releaseRate);
-            if (success) {
-                logger.log(Thread.currentThread().getName() + " added " + releaseRate + " tickets.");
-            } else {
-                logger.log(Thread.currentThread().getName() + " could not add tickets (capacity reached).");
+    public void process() {
+        ITicketPool ticketPool = this.getTicketPool();
+        LoggerService logger = this.getLogger();
+
+        TicketStatusEnum success = ticketPool.addTickets(getRate());
+
+        switch (success) {
+            case FULL:
+                logger.log("Pool is full. Vendors are waiting.");
                 break;
-            }
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
+            case EMPTY:
+                logger.log(
+                        "Vendors have No Tickets to Sale!");
                 Thread.currentThread().interrupt();
                 break;
-            }
+            case ERROR:
+                logger.log("An error occurred while adding tickets.");
+                break;
+            case SUCCESS:
+                logger.log("Tickets are added successfully by " + getName());
+                break;
+            default:
+                logger.log("System Forcefully Stopped!");
+                break;
         }
     }
 }

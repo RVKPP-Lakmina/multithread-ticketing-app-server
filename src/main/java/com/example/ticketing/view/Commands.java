@@ -19,13 +19,13 @@ public class Commands {
                 System.out.println("  ");
 
                 System.out.println("""
-                                - remove-vendor <name> : Remove a vendor with the given id.
+                                - remove-vendor <id> : Remove a vendor with the given id.
                                 command syntax : tsc remove-vendor <name>
                                 ex : tsc remove-vendor 1
                                 """);
 
                 System.out.println("""
-                                - remove-customer <name> : Remove a customer with the given id.
+                                - remove-customer <id> : Remove a customer with the given id.
                                 command syntax : tsc remove-customer <name>
                                 ex : tsc remove-customer 1
                                 """);
@@ -36,6 +36,11 @@ public class Commands {
                                 - exit : Exit the application.
                                 command syntax : exit
                                 """);
+
+                System.out.println("""
+                                - restart : Restart the application.
+                                command syntax : restart
+                                                """);
 
                 System.out.println("  ");
 
@@ -55,5 +60,18 @@ public class Commands {
                                 --help : Display the list of commands.
                                 command syntax : tsc --help
                                 """);
+
+                System.out.println(" ");
+
+                System.out.println("""
+                                - start : Start the simulation.
+                                command syntax : tsc start
+                                                """);
+
+                System.out.println("""
+                                - stop : Stop the simulation.
+                                command syntax : tsc stop
+                                                """);
+
         }
 }

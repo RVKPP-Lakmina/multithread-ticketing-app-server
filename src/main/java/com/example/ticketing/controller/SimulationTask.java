@@ -1,7 +1,9 @@
 package com.example.ticketing.controller;
 
 import com.example.ticketing.model.Customer;
-import com.example.ticketing.model.TicketPool;
+import com.example.ticketing.model.User;
+import com.example.ticketing.controller.interfaces.TicketingSystemSimulator;
+import com.example.ticketing.model.ConcurrentTicketStore;
 import com.example.ticketing.model.Vendor;
 import com.example.ticketing.util.LoggerService;
 import com.example.ticketing.util.Util;
@@ -12,68 +14,75 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class SimulationTask {
-    private final String VENDOR_PREFIX = "vendor";
-    private final String CUSTOMER_PREFIX = "customer";
-    private final TicketPool ticketPool;
+public class SimulationTask implements TicketingSystemSimulator {
+    private static final String VENDOR_PREFIX = "vendor";
+    private static final String CUSTOMER_PREFIX = "customer";
+
+    private final ConcurrentHashMap<String, Runnable> taskDefinitions;
+    private final ConcurrentTicketStore ticketPool;
     private final ExecutorService executorService;
-    private final ConcurrentHashMap<String, Future<?>> vendors;
-    private final ConcurrentHashMap<String, Future<?>> customers;
+    private final ConcurrentHashMap<String, Future<?>> taskMap;
     private final HashMap<String, String> users;
-    private LoggerService logger;
+    private final LoggerService logger;
+    private boolean isRunning;
 
     public SimulationTask(int initialTickets, int maxCapacity) {
-        this.ticketPool = new TicketPool(initialTickets, maxCapacity);
-        this.executorService = Executors.newCachedThreadPool();
-        this.vendors = new ConcurrentHashMap<>();
-        this.customers = new ConcurrentHashMap<>();
         this.logger = new LoggerService();
+        this.ticketPool = new ConcurrentTicketStore(initialTickets, maxCapacity, logger);
+        this.executorService = Executors.newCachedThreadPool();
+        this.taskMap = new ConcurrentHashMap<>();
         this.users = new HashMap<>();
+        this.isRunning = false;
+        this.taskDefinitions = new ConcurrentHashMap<>();
+
     }
 
     public void addVendor(String name, int rate) {
-        if (vendors.containsKey(name)) {
-            System.out.println("Vendor with ID " + name + " already exists.");
-            return;
-        }
-        Vendor vendor = new Vendor(ticketPool, rate, logger);
-        Future<?> future = executorService.submit(vendor);
-        String id = this.VENDOR_PREFIX.concat("-".concat(Util.generateUniqueKey()));
-        vendors.put(id, future);
-        users.put(id, name);
-        System.out.println("Vendor added with ID: " + id + ", rate: " + rate + " tickets/sec");
+        addTask(name, rate, VENDOR_PREFIX, () -> new Vendor(ticketPool, rate, name, logger));
     }
 
     public void addCustomer(String name, int rate) {
-        if (customers.containsKey(name)) {
-            System.out.println("Customer with ID " + name + " already exists.");
+        addTask(name, rate, CUSTOMER_PREFIX, () -> new Customer(ticketPool, rate, name, logger));
+    }
+
+    private void addTask(String name, int rate, String prefix, RunnableSupplier taskSupplier) {
+        if (users.containsValue(name)) {
+            System.out.println(
+                    prefix.substring(0, prefix.length() - 1).toUpperCase() + " with name " + name + " already exists.");
             return;
         }
-        Customer customer = new Customer(ticketPool, rate, logger);
-        Future<?> future = executorService.submit(customer);
-        String id = this.CUSTOMER_PREFIX.concat("-".concat(Util.generateUniqueKey()));
-        customers.put(id, future);
+        String id = prefix + "-" + Util.generateUniqueKey();
+        Runnable task = taskSupplier.get();
+        taskDefinitions.put(id, task); // Store task definition
         users.put(id, name);
-        System.out.println("Customer added with ID: " + id + ", rate: " + rate + " tickets/sec");
+
+        if (isRunning) {
+            Future<?> future = executorService.submit(task);
+            taskMap.put(id, future); // Start task immediately if running
+        }
+
+        System.out.println(prefix.substring(0, prefix.length() - 1).toUpperCase() + " added with ID: " + id + ", rate: "
+                + rate + " tickets/sec");
     }
 
     public void removeVendor(String id) {
-        Future<?> future = vendors.remove(id);
-        if (future != null) {
-            future.cancel(true); // Interrupt the vendor thread
-            System.out.println("Vendor with ID " + id + " removed.");
-        } else {
-            System.out.println("No vendor found with ID " + id);
-        }
+        removeTask(id, VENDOR_PREFIX);
     }
 
     public void removeCustomer(String id) {
-        Future<?> future = customers.remove(id);
+        removeTask(id, CUSTOMER_PREFIX);
+    }
+
+    private void removeTask(String id, String prefix) {
+        Future<?> future = taskMap.remove(id); // Remove active task
+        taskDefinitions.remove(id); // Remove task definition for resuming
+        users.remove(id); // Remove from user list
+
         if (future != null) {
-            future.cancel(true); // Interrupt the customer thread
-            System.out.println("Customer with ID " + id + " removed.");
+            future.cancel(true); // Interrupt the task
+            System.out.println(prefix.substring(0, prefix.length() - 1).toUpperCase() + " with ID " + id + " removed.");
         } else {
-            System.out.println("No customer found with ID " + id);
+            System.out.println("No " + prefix.substring(0, prefix.length() - 1).toUpperCase() + " found with ID " + id);
         }
     }
 
@@ -84,52 +93,42 @@ public class SimulationTask {
 
     public void shutdownSystem() {
         if (executorService != null) {
+            taskMap.clear();
+            users.clear();
             executorService.shutdownNow();
             logger.stop();
             System.out.println("System shut down.");
         }
     }
 
-    private int getTicketCount() {
-        return ticketPool.getTotalTickets();
-    }
-
-    private int getPoolTickets() {
-        return ticketPool.getPoolTickets();
-    }
-
     public void viewSystemStatus() {
-        System.out.println("Total tickets: " + getTicketCount());
-        System.out.println("Tickets in pool: " + getPoolTickets());
-        System.out.println("Active vendors: " + vendors.size());
-        System.out.println("Active customers: " + customers.size());
+        System.out.println("Total tickets: " + ticketPool.getTotalTickets());
+        System.out.println("Tickets in pool: " + ticketPool.getPoolTickets());
+        System.out.println("Active tasks: " + taskMap.size());
     }
 
     public void viewUsers() {
-        System.out.println("Users:\n");
-
+        System.out.println("Users:");
         System.out.println("""
                 Vendors:
                 =========================""");
         viewUserByType(VENDOR_PREFIX);
 
-        System.out.println("");
-
-        System.out.println(
-                """
-                        Customers:
-                        =========================""");
+        System.out.println("""
+                Customers:
+                =========================""");
         viewUserByType(CUSTOMER_PREFIX);
-
     }
 
-    private void viewUserByType(String type) {
-        System.out.println(type + "s:");
+    public void viewUserByType(String type) {
         users.forEach((id, name) -> {
             if (id.startsWith(type)) {
-                System.out.println(type + " ID: " + id + "- Name: " + name);
+                System.out.println(type + " ID: " + id + " - Name: " + name);
             }
         });
     }
 
+    private interface RunnableSupplier {
+        Runnable get();
+    }
 }

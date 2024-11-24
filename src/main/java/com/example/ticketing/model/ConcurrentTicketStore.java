@@ -4,19 +4,25 @@ import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.Condition;
+
+import com.example.ticketing.enumeration.TicketStatusEnum;
+import com.example.ticketing.model.interfaces.ITicketPool;
+import com.example.ticketing.util.LoggerService;
 import com.example.ticketingapp.model.Ticket;
 
-public class TicketPool {
+public class ConcurrentTicketStore implements ITicketPool {
     private int totalTickets;
     private final int maxCapacity;
     private final ReentrantLock lock = new ReentrantLock();
     private final Condition notFull = lock.newCondition(); // Vendors wait when pool is full
     private final Condition notEmpty = lock.newCondition(); // Customers wait when pool is empty
     protected final Queue<Ticket> tickets = new ConcurrentLinkedQueue<Ticket>();
+    private LoggerService logger;
 
-    public TicketPool(int totalTickets, int maxCapacity) {
+    public ConcurrentTicketStore(int totalTickets, int maxCapacity, LoggerService logger) {
         this.totalTickets = totalTickets;
         this.maxCapacity = maxCapacity;
+        this.logger = logger;
     }
 
     /**
@@ -26,30 +32,41 @@ public class TicketPool {
      * @return true if tickets were successfully added; false if the pool would
      *         exceed max capacity.
      */
-    public boolean addTickets(int count) {
+    public TicketStatusEnum addTickets(int count) {
         lock.lock();
+        int ticketsCount;
         try {
             if (totalTickets == 0) {
-                return false;
+                return TicketStatusEnum.EMPTY;
             }
 
+            if (count > totalTickets) {
+                this.logger.log("Not enough tickets to add. Only " + totalTickets + " tickets left.");
+            }
+
+            ticketsCount = Math.min(count, totalTickets);
+
             while (tickets.size() >= maxCapacity) {
+                this.logger.log("Pool is full. Vendor " + "is waiting.");
                 notFull.await(); // Wait if pool is full
             }
 
-            if (tickets.size() + count <= maxCapacity) {
-                for (int i = 0; i < count; i++) {
-                    tickets.add(new Ticket());
-                }
-                totalTickets -= count;
-                notEmpty.signalAll(); // Notify customers that tickets are available
-                return true;
+            int ticketsToAdd = Math.min(ticketsCount, maxCapacity - tickets.size());
+
+            for (int i = 0; i < ticketsToAdd; i++) {
+                tickets.add(new Ticket());
+                totalTickets = totalTickets - 1;
             }
 
-            return false; // Exceeding capacity
+            if (ticketsCount > ticketsToAdd) {
+                return addTickets(ticketsCount - ticketsToAdd);
+            }
+
+            notEmpty.signalAll(); // Notify customers that tickets are available
+            return TicketStatusEnum.SUCCESS;
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            return false;
+            return TicketStatusEnum.ERROR;
         } finally {
             lock.unlock();
         }
@@ -62,28 +79,39 @@ public class TicketPool {
      * @return true if tickets were successfully removed; false if not enough
      *         tickets are available.
      */
-    public boolean removeTickets(int count) {
+    public TicketStatusEnum purchaseTickets(int count) {
         lock.lock();
+        int ticketsCount;
         try {
             if (totalTickets == 0 && tickets.size() == 0) {
-                return false;
+                return TicketStatusEnum.EMPTY;
             }
 
-            while (tickets.size() > 0) {
+            if (totalTickets + tickets.size() < count) {
+                return TicketStatusEnum.NOTENOUGH;
+            }
+
+            while (tickets.size() == 0) {
+                this.logger.log("waiiting for Tickets");
                 notEmpty.await(); // Wait if not enough tickets
             }
 
-            if (tickets.size() > 0) {
-                for (int i = 0; i < count; i++) {
-                    tickets.poll();
-                }
-                notFull.signalAll(); // Notify vendors that pool is not full
-                return true;
+            ticketsCount = Math.min(count, tickets.size());
+
+            for (int i = 0; i < ticketsCount; i++) {
+                tickets.poll();
             }
-            return false; // Not enough tickets
+
+            if (ticketsCount < count) {
+                return purchaseTickets(count - ticketsCount);
+            }
+
+            notFull.signalAll(); // Notify vendors that pool is not full
+            return TicketStatusEnum.SUCCESS;
+
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            return false;
+            return TicketStatusEnum.ERROR;
         } finally {
             lock.unlock();
         }

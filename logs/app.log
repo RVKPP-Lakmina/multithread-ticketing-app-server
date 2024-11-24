@@ -1,0 +1,64 @@
+2024-11-24 21:40:23 [restartedMain] INFO  c.e.t.TicketingappApplication - Starting TicketingappApplication using Java 17.0.12 with PID 12648 (C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\bin\main started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server)
+2024-11-24 21:40:23 [restartedMain] INFO  c.e.t.TicketingappApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 21:40:23 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-24 21:40:23 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-24 21:40:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-11-24 21:40:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 MongoDB repository interfaces.
+2024-11-24 21:40:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-24 21:40:25 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-24 21:40:25 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-24 21:40:25 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 21:40:25 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-24 21:40:25 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1932 ms
+2024-11-24 21:40:25 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ticketingController' defined in file [C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\bin\main\com\example\ticketManager\controller\TicketingController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ticketingService' defined in file [C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\bin\main\com\example\ticketManager\service\TicketingService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.ticketing.controller.SimulationTask' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-24 21:40:25 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-11-24 21:40:25 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-24 21:40:25 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.ticketManager.service.TicketingService required a bean of type 'com.example.ticketing.controller.SimulationTask' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.ticketing.controller.SimulationTask' in your configuration.
+
+2024-11-24 21:40:38 [restartedMain] INFO  c.e.t.TicketingappApplication - Starting TicketingappApplication using Java 17.0.12 with PID 13092 (C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\bin\main started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server)
+2024-11-24 21:40:38 [restartedMain] INFO  c.e.t.TicketingappApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 21:40:38 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-24 21:40:38 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-24 21:40:39 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-11-24 21:40:39 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 MongoDB repository interfaces.
+2024-11-24 21:40:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-24 21:40:39 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-24 21:40:39 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-24 21:40:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 21:40:39 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-24 21:40:39 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1459 ms
+2024-11-24 21:40:39 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ticketingController' defined in file [C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\bin\main\com\example\ticketManager\controller\TicketingController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ticketingService' defined in file [C:\Users\Pramesh\Desktop\IIT CW\multithread-ticketing-app-server\bin\main\com\example\ticketManager\service\TicketingService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.ticketing.controller.SimulationTask' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-11-24 21:40:39 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-11-24 21:40:39 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-24 21:40:39 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.ticketManager.service.TicketingService required a bean of type 'com.example.ticketing.controller.SimulationTask' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.ticketing.controller.SimulationTask' in your configuration.
+

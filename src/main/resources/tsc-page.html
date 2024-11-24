@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Real-Time Ticketing</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
+    <script>
+      let stompClient = null;
+
+      function connect() {
+        const socket = new SockJS("/ticketing-websocket");
+        stompClient = Stomp.over(socket);
+
+        stompClient.connect({}, function (frame) {
+          console.log("Connected: " + frame);
+
+          // Subscribe to ticket updates
+          stompClient.subscribe("/topic/ticket-updates", function (message) {
+            document.getElementById(
+              "updates"
+            ).innerHTML += `<p>${message.body}</p>`;
+          });
+        });
+      }
+
+      function addTickets() {
+        const count = document.getElementById("ticketCount").value;
+        stompClient.send("/app/add-tickets", {}, count);
+      }
+
+      function purchaseTickets() {
+        const count = document.getElementById("purchaseCount").value;
+        stompClient.send("/app/purchase-tickets", {}, count);
+      }
+    </script>
+  </head>
+  <body onload="connect()">
+    <h1>Real-Time Ticketing System</h1>
+    <div>
+      <h3>Add Tickets</h3>
+      <input type="number" id="ticketCount" placeholder="Number of tickets" />
+      <button onclick="addTickets()">Add Tickets</button>
+    </div>
+    <div>
+      <h3>Purchase Tickets</h3>
+      <input type="number" id="purchaseCount" placeholder="Number of tickets" />
+      <button onclick="purchaseTickets()">Purchase Tickets</button>
+    </div>
+    <div>
+      <h3>Updates</h3>
+      <div id="updates"></div>
+    </div>
+  </body>
+</html>
