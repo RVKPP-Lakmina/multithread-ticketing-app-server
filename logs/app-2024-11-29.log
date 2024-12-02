@@ -1,0 +1,480 @@
+2024-11-29 05:02:14 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-02.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-02.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 05:02:15 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 05:02:42 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-00.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-00.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1201)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 05:03:42 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 05:04:02 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-00.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-00.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1201)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 05:04:12 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 05:14:17 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 29]
+2024-11-29 05:26:36 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 05:26:46 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-02.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-02.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1201)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 05:27:06 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 05:44:17 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 30]
+2024-11-29 06:13:42 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1201)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:13:52 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:14:02 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1201)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:14:17 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 31]
+2024-11-29 06:14:32 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:15:02 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1201)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:15:22 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:15:42 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1201)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:15:52 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:16:02 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1201)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:16:32 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:16:42 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1201)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:16:52 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:17:02 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-01.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-11-29 06:44:17 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 32]
+2024-11-29 08:21:23 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=170322100, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=67409d997261816d1af332e5, counter=4}, lastWriteDate=Fri Nov 29 08:21:23 IST 2024, lastUpdateTimeNanos=335823660778400}
+2024-11-29 08:21:26 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=191578800, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=6740a6bd74a7bde477b7bd6c, counter=3}, lastWriteDate=Fri Nov 29 08:21:25 IST 2024, lastUpdateTimeNanos=335825792849000}
+2024-11-29 08:21:27 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=986838900, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001d, setVersion=4, topologyVersion=TopologyVersion{processId=6740a0d43236505b381bf6db, counter=6}, lastWriteDate=Fri Nov 29 08:21:26 IST 2024, lastUpdateTimeNanos=335827172397200}
+2024-11-29 08:21:27 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001d and max set version 4
+2024-11-29 08:28:08 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-11-29 08:28:08 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-11-29 08:28:08 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-11-29 08:28:08 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=216814800, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001d, setVersion=4, topologyVersion=TopologyVersion{processId=6740a0d43236505b381bf6db, counter=6}, lastWriteDate=Fri Nov 29 08:28:08 IST 2024, lastUpdateTimeNanos=336228589990700}
+2024-11-29 08:28:08 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001d and max set version 4
+2024-11-29 08:28:08 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=154541800, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=6740a6bd74a7bde477b7bd6c, counter=3}, lastWriteDate=Fri Nov 29 08:28:08 IST 2024, lastUpdateTimeNanos=336228656797100}
+2024-11-29 08:28:08 [cluster-ClusterId{value='6747d19b7a22d04a0fd34334', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=158199100, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=67409d997261816d1af332e5, counter=4}, lastWriteDate=Fri Nov 29 08:28:08 IST 2024, lastUpdateTimeNanos=336228660454500}
+2024-11-29 08:33:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 33]
+2024-11-29 09:03:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 34]
+2024-11-29 09:33:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 35]
+2024-11-29 10:03:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 36]
+2024-11-29 10:33:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 37]
+2024-11-29 11:03:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 38]
+2024-11-29 11:33:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 39]
+2024-11-29 12:03:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 40]
+2024-11-29 12:33:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 41]
+2024-11-29 13:03:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 42]
+2024-11-29 13:33:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 43]
+2024-11-29 14:03:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 44]
+2024-11-29 14:33:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 45]
+2024-11-29 15:03:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 46]
+2024-11-29 15:33:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 47]
+2024-11-29 16:03:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 48]
+2024-11-29 16:33:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 49]
+2024-11-29 17:03:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 50]
+2024-11-29 17:33:18 [MessageBroker-3] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 51]
