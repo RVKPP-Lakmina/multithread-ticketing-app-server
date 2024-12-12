@@ -2,6 +2,7 @@ package com.example.ticketing.model.implementations;
 
 import com.example.ticketing.model.User;
 import com.example.ticketing.model.interfaces.ITicketPool;
+import com.example.ticketing.stores.Store;
 import com.example.ticketing.util.interfaces.IEventLogger;
 
 public abstract class ProducerConsumerThread implements Runnable {
@@ -27,10 +28,15 @@ public abstract class ProducerConsumerThread implements Runnable {
 
     public void processingLogger(String message) {
         if (isBackEndService) {
+            user.setActive(true);
             logger.log(message, user);
         } else {
             logger.log(message);
         }
+    }
+
+    public void setBackEndService(boolean isBackEndService) {
+        this.isBackEndService = isBackEndService;
     }
 
     public IEventLogger getLogger() {
@@ -51,7 +57,7 @@ public abstract class ProducerConsumerThread implements Runnable {
 
     @Override
     public void run() {
-        while (!Thread.currentThread().isInterrupted()) {
+        while (!Thread.currentThread().isInterrupted() || Store.getTotalTickets() == 0) {
             process();
             sleep();
         }

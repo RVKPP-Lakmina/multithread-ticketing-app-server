@@ -19,7 +19,7 @@ public interface IEventLogger {
      * @param user
      */
     void log(String message, User user);
-
+    
     /**
      * Starts the logger.
      */

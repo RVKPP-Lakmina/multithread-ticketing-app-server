@@ -22,7 +22,6 @@ public class ConcurrentTicketStore implements ITicketPool {
         Store.setMaxCapacity(maxCapacity);
         this.logger = logger;
         tickets = Store.ticketsQueue();
-
     }
 
     /**

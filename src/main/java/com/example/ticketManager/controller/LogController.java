@@ -20,7 +20,7 @@ public class LogController {
 
     private final String logDirectory = "logs"; // Path to log directory
 
-    @GetMapping("/logger")
+    @GetMapping("/api/logger")
     public ResponseEntity<Resource> getLatestLog() throws IOException {
         // Get the latest log file (sorted by file name)
         try (Stream<Path> logFiles = Files.list(Paths.get(logDirectory))) {

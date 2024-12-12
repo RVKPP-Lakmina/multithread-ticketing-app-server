@@ -1,6 +1,7 @@
 package com.example.ticketManager.controller;
 
 import com.example.ticketManager.util.GlobalLogger;
+import com.example.ticketing.model.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,10 +40,12 @@ public class TicketingController {
     }
 
     @PostMapping("/vendor/batch")
-    public ResponseEntity<String> addVendor(@RequestBody Map<String, Integer> vendors) {
+    public ResponseEntity<String> addVendor(@RequestBody Map<String, User> vendors) {
         GlobalLogger.logInfo(vendors.toString());
-        vendors.forEach(ticketingService::addVendor);
-
+        vendors.forEach((key, user) -> {
+            user.setId(key);
+            ticketingService.addVendor(user);
+        });
         return ResponseEntity.ok("Vendors have been added! ");
     }
 
@@ -53,10 +56,13 @@ public class TicketingController {
     }
 
     @PostMapping("/customer/batch")
-    public ResponseEntity<String> addCustomer(@RequestBody Map<String, Integer> customers) {
+    public ResponseEntity<String> addCustomer(@RequestBody Map<String, User> customers) {
         System.out.println(customers);
 
-        customers.forEach(ticketingService::addCustomer);
+        customers.forEach((key, user) -> {
+            user.setId(key);
+            ticketingService.addCustomer(user);
+        });
 
         return ResponseEntity.ok("Customers have been added! ");
     }
@@ -77,14 +83,4 @@ public class TicketingController {
         ticketingService.removeCustomer(id);
         return ResponseEntity.ok("Customer removed: " + id);
     }
-
-    // @GetMapping("/status")
-    // public ResponseEntity<String> viewSystemStatus() {
-    // return ResponseEntity.ok(ticketingService.viewSystemStatus());
-    // }
-
-    // @GetMapping("/users")
-    // public ResponseEntity<String> viewUsers() {
-    // return ResponseEntity.ok(ticketingService.viewUsers());
-    // }
 }

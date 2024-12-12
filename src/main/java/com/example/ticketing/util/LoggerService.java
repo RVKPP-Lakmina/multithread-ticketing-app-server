@@ -75,14 +75,15 @@ public class LoggerService implements IEventLogger {
      * @param message the log message to be added
      */
     public void log(String message) {
-        logQueue.offer(message);
+        logQueue.add(message);
     }
 
     public void log(String message, User user) {
+        this.log(message);
     }
 
     public void error(String message) {
-        logQueue.offer(message);
+        logQueue.add(message);
     }
 
     /**

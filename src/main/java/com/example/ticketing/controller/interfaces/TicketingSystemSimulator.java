@@ -23,18 +23,22 @@ public interface TicketingSystemSimulator {
     /**
      * Adds a vendor to the simulation.
      *
-     * @param id   the unique identifier of the vendor
+     * @param name   the unique identifier of the vendor
      * @param rate the rate at which the vendor operates
      */
-    void addVendor(String id, int rate);
+    void addVendor(String name, int rate);
+
+    void addVendor(String id, String name, int rate);
 
     /**
      * Adds a customer to the simulation.
      *
-     * @param id   the unique identifier of the customer
+     * @param name   the unique identifier of the customer
      * @param rate the rate at which the customer operates
      */
-    void addCustomer(String id, int rate);
+    void addCustomer(String name, int rate);
+
+    void addCustomer(String id, String name, int rate);
 
     /**
      * Removes a vendor from the simulation.

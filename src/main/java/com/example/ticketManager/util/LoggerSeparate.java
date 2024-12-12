@@ -1,44 +1,37 @@
 package com.example.ticketManager.util;
 
 import com.example.ticketManager.component.WebSocketHandler;
-import com.example.ticketManager.model.WebSocketsMessage;
+import com.example.ticketManager.service.implementations.ErrorMessage;
+import com.example.ticketManager.service.implementations.WebSocketsMessage;
+import com.example.ticketManager.service.interfaces.ResponseMessage;
 import com.example.ticketing.model.User;
 import com.example.ticketing.stores.Store;
 import com.example.ticketing.util.interfaces.IEventLogger;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public abstract class LoggerSeparate implements IEventLogger {
 
-    private final WebSocketHandler webSocketHandler;
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    ResponseMessage responseMessage;
+    ResponseMessage responseErrMessage;
 
     public LoggerSeparate(WebSocketHandler webSocketHandler) {
-        this.webSocketHandler = webSocketHandler;
+        this.responseMessage = new WebSocketsMessage(webSocketHandler);
+        responseErrMessage = new ErrorMessage(webSocketHandler);
     }
 
     @Override
     public void log(String message) {
-        webSocketHandler.sendMessageToAll(message);
+        responseMessage.message(message);
     }
 
     public void log(String message, User user) {
-
-        try {
-            WebSocketsMessage socketMessage = new WebSocketsMessage(user, message, Store.getTotalTickets(), Store.ticketsQueue().size());
-            webSocketHandler.sendMessageToAll(objectMapper.writeValueAsString(socketMessage));
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
+        responseMessage.message(message, user);
     }
 
     @Override
     public void error(String message) {
-        throw new RuntimeException("Error: " + message);
+        responseErrMessage.message(message);
     }
 
     @Override
-    public void stop() {
-        // Do nothing
-    }
+    public void stop(){}
 }

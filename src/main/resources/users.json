@@ -1,0 +1,10 @@
+{
+  "vendors" : [ ],
+  "customers" : [ {
+    "id" : null,
+    "name" : "pramesh",
+    "rate" : 10,
+    "prefix" : null,
+    "active" : false
+  } ]
+}

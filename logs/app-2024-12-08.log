@@ -1,0 +1,1230 @@
+2024-12-08 12:03:52 [main] INFO  c.e.t.TicketManagerApplication - Starting TicketManagerApplication using Java 22.0.2 with PID 39352 (C:\Users\Pramesh\Desktop\IIT CW\ticketManager\target\classes started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\ticketManager)
+2024-12-08 12:03:52 [main] INFO  c.e.t.TicketManagerApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-08 12:03:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-12-08 12:03:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 MongoDB repository interfaces.
+2024-12-08 12:03:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-08 12:03:53 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-08 12:03:53 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-08 12:03:53 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08 12:03:53 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 12:03:53 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1099 ms
+2024-12-08 12:03:53 [main] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Patterns [/ticketing-websocket] in 'webSocketHandlerMapping'
+2024-12-08 12:03:53 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "ticketing-app-cluster"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22.0.2+9-70"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='ticketingapp', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@570b2057, com.mongodb.Jep395RecordCodecProvider@a457c2b, com.mongodb.KotlinCodecProvider@16a6dc21]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=ticketing-app-cluster.ippit.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi6sw-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='ticketing-app-cluster', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2024-12-08 12:03:53 [cluster-ClusterId{value='67553dd16ddc102ddf5de0d1', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017 to client view of cluster
+2024-12-08 12:03:53 [cluster-ClusterId{value='67553dd16ddc102ddf5de0d1', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 to client view of cluster
+2024-12-08 12:03:53 [cluster-ClusterId{value='67553dd16ddc102ddf5de0d1', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017 to client view of cluster
+2024-12-08 12:03:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-08 12:03:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-08 12:03:54 [main] INFO  c.e.t.TicketManagerApplication - Started TicketManagerApplication in 2.784 seconds (process running for 3.643)
+2024-12-08 12:03:54 [cluster-ClusterId{value='67553dd16ddc102ddf5de0d1', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=381767800, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=6740a6bd74a7bde477b7bd6c, counter=3}, lastWriteDate=Sun Dec 08 12:03:53 IST 2024, lastUpdateTimeNanos=1126825252832100}
+2024-12-08 12:03:54 [cluster-ClusterId{value='67553dd16ddc102ddf5de0d1', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=374732200, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=67409d997261816d1af332e5, counter=4}, lastWriteDate=Sun Dec 08 12:03:53 IST 2024, lastUpdateTimeNanos=1126825252832000}
+2024-12-08 12:03:54 [cluster-ClusterId{value='67553dd16ddc102ddf5de0d1', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=375983300, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001d, setVersion=4, topologyVersion=TopologyVersion{processId=6740a0d43236505b381bf6db, counter=6}, lastWriteDate=Sun Dec 08 12:03:53 IST 2024, lastUpdateTimeNanos=1126825252832000}
+2024-12-08 12:03:54 [cluster-ClusterId{value='67553dd16ddc102ddf5de0d1', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001d and max set version 4
+2024-12-08 12:04:01 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 12:04:01 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 12:04:01 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-08 12:04:01 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@39da5e49
+2024-12-08 12:04:01 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 12:04:01 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=428c6ec8-028f-8e01-a113-ca177fb767ab, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 12:35:04 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@39da5e49
+2024-12-08 12:35:04 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 12:35:04 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=f1e87554-e8e2-4943-0bd5-95b5ba5f187c, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 12:36:45 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=f1e87554-e8e2-4943-0bd5-95b5ba5f187c, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1000, reason=null]
+2024-12-08 12:36:48 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@39da5e49
+2024-12-08 12:36:48 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 12:36:48 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=34f428df-90ae-d80a-7937-8199638e4184, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 12:46:52 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=34f428df-90ae-d80a-7937-8199638e4184, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 12:46:55 [http-nio-8080-exec-2] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@39da5e49
+2024-12-08 12:46:55 [http-nio-8080-exec-2] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 12:46:55 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=f22b8122-5089-9ddb-f85e-c7893b405234, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 12:47:26 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=f22b8122-5089-9ddb-f85e-c7893b405234, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 12:47:29 [http-nio-8080-exec-4] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@39da5e49
+2024-12-08 12:47:29 [http-nio-8080-exec-4] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 12:47:29 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=8561504d-131e-cf73-5c2a-d8007f2f5192, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 12:50:52 [http-nio-8080-exec-6] INFO  c.e.ticketManager.util.GlobalLogger - {nethmika=5, priyashan=2, lakmina=4, Tharindu=5, Kusal=2, Pathum=4}
+2024-12-08 12:59:53 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08 12:59:53 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-08 12:59:53 [SpringApplicationShutdownHook] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - Transport error in StandardWebSocketSession[id=428c6ec8-028f-8e01-a113-ca177fb767ab, uri=ws://localhost:8080/ticketing-websocket]
+java.io.IOException: java.nio.channels.ClosedChannelException
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:326)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:792)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:589)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:556)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:544)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1024)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4052)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4662)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:471)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:915)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:447)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:301)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:374)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:177)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.nio.channels.ClosedChannelException: null
+	at org.apache.tomcat.util.net.NioChannel$1.write(NioChannel.java:273)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1632)
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1051)
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1440)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1366)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1337)
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:171)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:521)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	... 39 common frames omitted
+2024-12-08 12:59:53 [SpringApplicationShutdownHook] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=428c6ec8-028f-8e01-a113-ca177fb767ab, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=The web application is stopping]
+2024-12-08 12:59:53 [SpringApplicationShutdownHook] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - Transport error in StandardWebSocketSession[id=8561504d-131e-cf73-5c2a-d8007f2f5192, uri=ws://localhost:8080/ticketing-websocket]
+java.io.IOException: java.nio.channels.ClosedChannelException
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:326)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:792)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:589)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:556)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:544)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1024)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4052)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4662)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:471)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:915)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:447)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:301)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:374)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:177)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.nio.channels.ClosedChannelException: null
+	at org.apache.tomcat.util.net.NioChannel$1.write(NioChannel.java:273)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1632)
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1051)
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1440)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1366)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1337)
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:171)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:521)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	... 39 common frames omitted
+2024-12-08 12:59:53 [SpringApplicationShutdownHook] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=8561504d-131e-cf73-5c2a-d8007f2f5192, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=The web application is stopping]
+2024-12-08 13:00:01 [main] INFO  c.e.t.TicketManagerApplication - Starting TicketManagerApplication using Java 22.0.2 with PID 60244 (C:\Users\Pramesh\Desktop\IIT CW\ticketManager\target\classes started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\ticketManager)
+2024-12-08 13:00:01 [main] INFO  c.e.t.TicketManagerApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-08 13:00:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-12-08 13:00:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 MongoDB repository interfaces.
+2024-12-08 13:00:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-08 13:00:02 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-08 13:00:02 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-08 13:00:02 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08 13:00:02 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 13:00:02 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1410 ms
+2024-12-08 13:00:02 [main] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Patterns [/ticketing-websocket] in 'webSocketHandlerMapping'
+2024-12-08 13:00:03 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "ticketing-app-cluster"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22.0.2+9-70"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='ticketingapp', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@799c8758, com.mongodb.Jep395RecordCodecProvider@6e00837f, com.mongodb.KotlinCodecProvider@63e4484d]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=ticketing-app-cluster.ippit.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi6sw-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='ticketing-app-cluster', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2024-12-08 13:00:03 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017 to client view of cluster
+2024-12-08 13:00:03 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 to client view of cluster
+2024-12-08 13:00:03 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017 to client view of cluster
+2024-12-08 13:00:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-08 13:00:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-08 13:00:03 [main] INFO  c.e.t.TicketManagerApplication - Started TicketManagerApplication in 3.3 seconds (process running for 4.319)
+2024-12-08 13:00:03 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 13:00:03 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 13:00:03 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-08 13:00:03 [http-nio-8080-exec-2] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 13:00:03 [http-nio-8080-exec-2] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 13:00:03 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=d67bc436-d3d4-07b1-e319-6647d3b5cfa8, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 13:00:04 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=426625800, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=6740a6bd74a7bde477b7bd6c, counter=3}, lastWriteDate=Sun Dec 08 13:00:03 IST 2024, lastUpdateTimeNanos=1130194591771000}
+2024-12-08 13:00:04 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=414634400, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001d, setVersion=4, topologyVersion=TopologyVersion{processId=6740a0d43236505b381bf6db, counter=6}, lastWriteDate=Sun Dec 08 13:00:03 IST 2024, lastUpdateTimeNanos=1130194592499200}
+2024-12-08 13:00:04 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=395179000, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=67409d997261816d1af332e5, counter=4}, lastWriteDate=Sun Dec 08 13:00:03 IST 2024, lastUpdateTimeNanos=1130194591934200}
+2024-12-08 13:00:04 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001d and max set version 4
+2024-12-08 13:00:22 [http-nio-8080-exec-5] INFO  c.e.ticketManager.util.GlobalLogger - {nethmika=5, priyashan=2, lakmina=4, Tharindu=5, Kusal=2, Pathum=4}
+2024-12-08 13:01:34 [http-nio-8080-exec-7] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 13:01:34 [http-nio-8080-exec-7] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 13:01:34 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=c5bf2735-1bc2-b2a2-2f2d-e704922b0917, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 14:12:58 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 14:12:58 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 14:12:58 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 14:12:58 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 14:12:58 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 14:12:58 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 14:16:48 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-02.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-02.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 14:16:58 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: ticketing-app-cluster-shard-00-00.ippit.mongodb.net
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: ticketing-app-cluster-shard-00-00.ippit.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 14:28:23 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - Transport error in StandardWebSocketSession[id=c5bf2735-1bc2-b2a2-2f2d-e704922b0917, uri=ws://localhost:8080/ticketing-websocket]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1181)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-12-08 14:33:41 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=c5bf2735-1bc2-b2a2-2f2d-e704922b0917, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1006, reason=null]
+2024-12-08 14:33:41 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=d67bc436-d3d4-07b1-e319-6647d3b5cfa8, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1000, reason=null]
+2024-12-08 14:36:39 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 14:36:39 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 14:36:45 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 14:36:45 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 14:36:45 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=227fcd6a-3d1c-1ac6-a080-dfe97a41e133, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 14:39:44 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - Transport error in StandardWebSocketSession[id=227fcd6a-3d1c-1ac6-a080-dfe97a41e133, uri=ws://localhost:8080/ticketing-websocket]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1181)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-12-08 14:39:44 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=227fcd6a-3d1c-1ac6-a080-dfe97a41e133, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1006, reason=null]
+2024-12-08 15:12:49 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 15:12:49 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 15:12:49 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=8011d2e7-6e02-5166-2c44-08d4805447e2, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 15:12:49 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=8011d2e7-6e02-5166-2c44-08d4805447e2, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 15:12:52 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 15:12:52 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 15:12:52 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=8941337d-dc91-d11f-68ba-695950a9ccec, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 15:22:19 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: The requested name is valid, but no data of the requested type was found (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: The requested name is valid, but no data of the requested type was found (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 15:22:19 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketException: Network is unreachable: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	... 3 common frames omitted
+2024-12-08 15:22:19 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: The requested name is valid, but no data of the requested type was found (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: The requested name is valid, but no data of the requested type was found (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 15:22:30 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1010803000, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=6740a6bd74a7bde477b7bd6c, counter=3}, lastWriteDate=Sun Dec 08 15:22:29 IST 2024, lastUpdateTimeNanos=1138740761645200}
+2024-12-08 15:22:32 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3092708400, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001d, setVersion=4, topologyVersion=TopologyVersion{processId=6740a0d43236505b381bf6db, counter=6}, lastWriteDate=Sun Dec 08 15:22:31 IST 2024, lastUpdateTimeNanos=1138742955591000}
+2024-12-08 15:22:32 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001d and max set version 4
+2024-12-08 15:22:42 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:790)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:675)
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:507)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:482)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:440)
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:100)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:235)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:472)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:924)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1293)
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:165)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:672)
+	... 12 common frames omitted
+2024-12-08 15:22:50 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 15:22:50 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 15:22:50 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketException: Network is unreachable: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	... 3 common frames omitted
+2024-12-08 15:22:50 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 15:22:53 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketException: Network is unreachable: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	... 3 common frames omitted
+2024-12-08 15:23:03 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3121217700, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001d, setVersion=4, topologyVersion=TopologyVersion{processId=6740a0d43236505b381bf6db, counter=6}, lastWriteDate=Sun Dec 08 15:23:00 IST 2024, lastUpdateTimeNanos=1138773922571800}
+2024-12-08 15:23:03 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001d and max set version 4
+2024-12-08 15:23:04 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=958797800, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=67409d997261816d1af332e5, counter=4}, lastWriteDate=Sun Dec 08 15:23:02 IST 2024, lastUpdateTimeNanos=1138774552840900}
+2024-12-08 15:23:06 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6122616500, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=6740a6bd74a7bde477b7bd6c, counter=3}, lastWriteDate=Sun Dec 08 15:23:05 IST 2024, lastUpdateTimeNanos=1138777103977800}
+2024-12-08 15:53:05 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 15:53:05 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 15:53:06 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=385175200, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001d, setVersion=4, topologyVersion=TopologyVersion{processId=6740a0d43236505b381bf6db, counter=6}, lastWriteDate=Sun Dec 08 15:53:05 IST 2024, lastUpdateTimeNanos=1140576511430800}
+2024-12-08 15:53:06 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001d and max set version 4
+2024-12-08 15:53:06 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=265927800, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=67409d997261816d1af332e5, counter=4}, lastWriteDate=Sun Dec 08 15:53:06 IST 2024, lastUpdateTimeNanos=1140577105481700}
+2024-12-08 17:37:43 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - Transport error in StandardWebSocketSession[id=8941337d-dc91-d11f-68ba-695950a9ccec, uri=ws://localhost:8080/ticketing-websocket]
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1293)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1181)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:74)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:184)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:164)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:152)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-12-08 17:37:43 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=8941337d-dc91-d11f-68ba-695950a9ccec, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1006, reason=null]
+2024-12-08 17:39:05 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 17:39:05 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 17:39:05 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=22c02f54-0244-c372-51da-8016c964b033, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 17:39:08 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 17:39:08 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-01.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 17:39:09 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 17:39:10 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=228388900, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=67409d997261816d1af332e5, counter=4}, lastWriteDate=Sun Dec 08 17:39:09 IST 2024, lastUpdateTimeNanos=1146941046064400}
+2024-12-08 17:39:18 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=227511700, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001d, setVersion=4, topologyVersion=TopologyVersion{processId=6740a0d43236505b381bf6db, counter=6}, lastWriteDate=Sun Dec 08 17:39:17 IST 2024, lastUpdateTimeNanos=1146949463024000}
+2024-12-08 17:39:18 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001d and max set version 4
+2024-12-08 17:39:19 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 17:39:19 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=211041700, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=6740a6bd74a7bde477b7bd6c, counter=3}, lastWriteDate=Sun Dec 08 17:39:18 IST 2024, lastUpdateTimeNanos=1146950208410800}
+2024-12-08 17:59:57 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=22c02f54-0244-c372-51da-8016c964b033, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 17:59:59 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 17:59:59 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 17:59:59 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=cc2588ed-3c5e-18d9-48c9-76bfab17cecc, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:24:24 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=cc2588ed-3c5e-18d9-48c9-76bfab17cecc, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:24:30 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:24:30 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:24:30 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=4d2684ed-9d46-5a24-5e71-c7af8fd13c57, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:25:21 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=4d2684ed-9d46-5a24-5e71-c7af8fd13c57, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:25:24 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:25:24 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:25:24 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=8edaa4b2-00d2-25ac-d2b7-c4b517efd73e, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:25:27 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=8edaa4b2-00d2-25ac-d2b7-c4b517efd73e, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:25:32 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:25:32 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:25:32 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=c6441730-5ddf-d53c-d717-38026517ca99, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:25:54 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=c6441730-5ddf-d53c-d717-38026517ca99, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:25:57 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:25:57 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:25:57 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=d8728860-5dd4-ebfe-99a5-3cc0d01cc6ee, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:26:38 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=d8728860-5dd4-ebfe-99a5-3cc0d01cc6ee, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:26:41 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:26:41 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:26:41 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=fae22e04-2fcf-aad0-82bd-8772d5b420c5, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:27:31 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=fae22e04-2fcf-aad0-82bd-8772d5b420c5, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:27:34 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:27:34 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:27:34 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=960ef343-9ca1-53ed-b8e3-f6d94b3bb9cb, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:27:38 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=960ef343-9ca1-53ed-b8e3-f6d94b3bb9cb, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:27:41 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:27:41 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:27:41 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=743fdb6d-58e9-bcbd-ea97-9db1daf4ce87, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:28:35 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=743fdb6d-58e9-bcbd-ea97-9db1daf4ce87, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:28:38 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:28:38 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:28:38 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=18137dda-9bd9-e35d-4c21-f6cead84c36c, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:29:52 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=18137dda-9bd9-e35d-4c21-f6cead84c36c, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:29:55 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:29:55 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:29:55 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=6850795a-f089-c7a7-df96-844d6689a280, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:30:12 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=6850795a-f089-c7a7-df96-844d6689a280, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:30:15 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:30:15 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:30:15 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=92f32c64-4dde-a966-f5a7-6bfc52955102, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:30:17 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=92f32c64-4dde-a966-f5a7-6bfc52955102, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:30:20 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:30:20 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:30:20 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=2c940cd7-625c-ee03-f4e8-66aeddf5ca14, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:30:43 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=2c940cd7-625c-ee03-f4e8-66aeddf5ca14, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:30:46 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:30:46 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:30:46 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=9c89cd29-3582-8069-59a8-96b948fef821, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:31:03 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=9c89cd29-3582-8069-59a8-96b948fef821, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:31:06 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:31:06 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:31:06 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=b971d27c-ee71-30b2-0090-c59098c9ee4e, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:31:22 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=b971d27c-ee71-30b2-0090-c59098c9ee4e, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:31:25 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:31:25 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:31:25 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=b2fd8679-ef06-0e58-a296-901bd1a79605, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:31:27 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=b2fd8679-ef06-0e58-a296-901bd1a79605, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:31:30 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:31:30 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:31:30 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=2e29b16b-28a8-b700-9d05-5e4264aabdc4, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:31:33 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=2e29b16b-28a8-b700-9d05-5e4264aabdc4, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:31:36 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:31:36 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:31:36 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=b43f7c49-a86b-1381-fb96-98fee503e749, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:33:56 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=b43f7c49-a86b-1381-fb96-98fee503e749, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:33:59 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:33:59 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:33:59 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=4d5464bc-765f-3eba-acef-6f63002fc9e7, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:34:56 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=4d5464bc-765f-3eba-acef-6f63002fc9e7, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:34:59 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:34:59 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:34:59 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=680f6fe6-a10b-e721-16fa-af3fad1002d4, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:36:08 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=680f6fe6-a10b-e721-16fa-af3fad1002d4, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:36:11 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:36:11 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:36:11 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=fdf688ee-9581-050e-cfe4-54b2a289ae35, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:36:14 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=fdf688ee-9581-050e-cfe4-54b2a289ae35, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:36:17 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:36:17 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:36:17 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=f394ac12-af8c-34b8-a9c9-99d9092b6548, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:36:50 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=f394ac12-af8c-34b8-a9c9-99d9092b6548, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:36:53 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:36:53 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:36:53 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=c61feb78-14d8-14b5-ee40-9c737302db72, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:37:03 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=c61feb78-14d8-14b5-ee40-9c737302db72, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:37:06 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:37:06 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:37:06 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=6489c47f-be1d-5cb9-ec64-8f280bb17469, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:37:12 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=6489c47f-be1d-5cb9-ec64-8f280bb17469, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:37:15 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:37:15 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:37:15 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=5818b74c-d7b2-bfb5-b309-1d5d0e42757a, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:37:16 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=5818b74c-d7b2-bfb5-b309-1d5d0e42757a, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:37:20 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:37:20 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:37:20 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=2aefcc9b-4a05-0be6-1c2d-3cf07a749fc6, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:39:53 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=2aefcc9b-4a05-0be6-1c2d-3cf07a749fc6, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:39:55 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:39:55 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:39:55 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=042670ce-95de-a78b-0ee3-af86056c3535, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:39:58 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=042670ce-95de-a78b-0ee3-af86056c3535, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:40:01 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:40:01 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:40:01 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=985a3441-e47f-e7e9-fc41-d2df50fd8d60, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:40:07 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=985a3441-e47f-e7e9-fc41-d2df50fd8d60, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 18:40:11 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:40:11 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:40:11 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=41dace81-5beb-b847-b113-83c75c0936f8, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:41:02 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=41dace81-5beb-b847-b113-83c75c0936f8, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1000, reason=null]
+2024-12-08 18:41:04 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:41:04 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:41:04 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=68ca64f6-b3ee-6958-4f4e-4a383d9c074a, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:41:04 [http-nio-8080-exec-2] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 18:41:04 [http-nio-8080-exec-2] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 18:41:04 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=29f3e867-08c3-d570-9499-3a130cc307e4, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 18:41:04 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=68ca64f6-b3ee-6958-4f4e-4a383d9c074a, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1000, reason=null]
+2024-12-08 19:06:55 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=29f3e867-08c3-d570-9499-3a130cc307e4, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:07:03 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:07:03 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:07:03 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=3510b910-f055-3d61-5f64-20e9214d77d8, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:07:03 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=3510b910-f055-3d61-5f64-20e9214d77d8, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1000, reason=null]
+2024-12-08 19:07:27 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:07:27 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:07:27 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=f9cb44d9-cf8f-320b-724e-4ede81ec91db, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:07:30 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=f9cb44d9-cf8f-320b-724e-4ede81ec91db, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1000, reason=null]
+2024-12-08 19:08:18 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:08:18 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:08:18 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=ffc8863c-692b-c1c7-79ea-1ff095693aaa, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:08:50 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=ffc8863c-692b-c1c7-79ea-1ff095693aaa, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1000, reason=null]
+2024-12-08 19:09:48 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:09:48 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:09:48 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=945dba77-b8f2-9431-4b1c-584d1dde8951, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:11:37 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=945dba77-b8f2-9431-4b1c-584d1dde8951, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:11:40 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:11:40 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:11:40 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=abe53ea2-ff74-86c2-6f97-1009632b23a4, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:11:47 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=abe53ea2-ff74-86c2-6f97-1009632b23a4, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:11:49 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:11:49 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:11:49 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=01cf43ae-1e8a-f418-e141-44f7b31f8b7a, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:24:34 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=01cf43ae-1e8a-f418-e141-44f7b31f8b7a, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:24:37 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:24:37 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:24:37 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=81c3e61e-2837-e268-147f-56c20affd80a, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:26:31 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=81c3e61e-2837-e268-147f-56c20affd80a, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:26:34 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:26:34 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:26:34 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=e9951f17-32c8-352c-3ba7-954e0c631a69, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:26:45 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=e9951f17-32c8-352c-3ba7-954e0c631a69, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:26:47 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:26:47 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:26:47 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=acd46bcc-6d33-ef3d-c42e-d7db3ba60008, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:29:02 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=acd46bcc-6d33-ef3d-c42e-d7db3ba60008, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:29:05 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:29:05 [http-nio-8080-exec-1] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:29:05 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=1a27e60a-7719-f92a-2442-305a664e1d38, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:30:22 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=1a27e60a-7719-f92a-2442-305a664e1d38, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:30:25 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:30:25 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:30:25 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=bdd89364-edf6-9839-d9d9-b56d5e2a563e, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:33:38 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=bdd89364-edf6-9839-d9d9-b56d5e2a563e, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:33:41 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:33:41 [http-nio-8080-exec-6] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:33:41 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=0637758d-445b-b8db-ac8a-5b42ef1691af, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:33:45 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=0637758d-445b-b8db-ac8a-5b42ef1691af, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:33:48 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:33:48 [http-nio-8080-exec-8] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:33:48 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=29a58bdf-d838-8a69-3796-b8b40e9f228b, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 19:36:36 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=29a58bdf-d838-8a69-3796-b8b40e9f228b, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=null]
+2024-12-08 19:36:41 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@55c57422
+2024-12-08 19:36:41 [http-nio-8080-exec-10] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 19:36:41 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=448ad2c7-45a2-acee-a6ff-ee5a4eeb89be, uri=ws://localhost:8080/ticketing-websocket]
+2024-12-08 21:16:52 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 21:16:53 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 21:17:00 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824)
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:812)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:1108)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1095)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1462)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1068)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829)
+	... 4 common frames omitted
+2024-12-08 21:17:03 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-02.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 21:17:04 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: java.net.UnknownHostException: No such host is known (ticketing-app-cluster-shard-00-00.ippit.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1221)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1816)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1149)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1806)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676)
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71)
+	... 5 common frames omitted
+2024-12-08 21:17:06 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=233213900, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001d, setVersion=4, topologyVersion=TopologyVersion{processId=6740a0d43236505b381bf6db, counter=6}, lastWriteDate=Sun Dec 08 21:17:05 IST 2024, lastUpdateTimeNanos=1160016618224200}
+2024-12-08 21:17:06 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001d and max set version 4
+2024-12-08 21:17:14 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=206482400, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=6740a6bd74a7bde477b7bd6c, counter=3}, lastWriteDate=Sun Dec 08 21:17:13 IST 2024, lastUpdateTimeNanos=1160024619884400}
+2024-12-08 21:17:14 [cluster-ClusterId{value='67554afb6ff1191dae763044', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=204677300, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=67409d997261816d1af332e5, counter=4}, lastWriteDate=Sun Dec 08 21:17:14 IST 2024, lastUpdateTimeNanos=1160025442675300}
+2024-12-08 21:43:30 [http-nio-8080-exec-5] ERROR c.e.ticketManager.util.GlobalLogger - Cannot invoke "com.example.ticketing.model.User.getId()" because "user" is null
+java.lang.NullPointerException: Cannot invoke "com.example.ticketing.model.User.getId()" because "user" is null
+	at com.example.ticketing.controller.SimulationTask.addCustomer(SimulationTask.java:91)
+	at com.example.ticketManager.service.TicketingService.addCustomer(TicketingService.java:33)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at com.example.ticketManager.controller.TicketingController.addCustomer(TicketingController.java:59)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-12-08 21:43:39 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-08 21:43:39 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-08 21:43:39 [SpringApplicationShutdownHook] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - Transport error in StandardWebSocketSession[id=448ad2c7-45a2-acee-a6ff-ee5a4eeb89be, uri=ws://localhost:8080/ticketing-websocket]
+java.io.IOException: java.nio.channels.ClosedChannelException
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:326)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:792)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:589)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:556)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:544)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1024)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4052)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4662)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:471)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:915)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:447)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:301)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:374)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:177)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.nio.channels.ClosedChannelException: null
+	at org.apache.tomcat.util.net.NioChannel$1.write(NioChannel.java:273)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1632)
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1051)
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1440)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1366)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1337)
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:171)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:521)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	... 39 common frames omitted
+2024-12-08 21:43:39 [SpringApplicationShutdownHook] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - StandardWebSocketSession[id=448ad2c7-45a2-acee-a6ff-ee5a4eeb89be, uri=ws://localhost:8080/ticketing-websocket] closed with CloseStatus[code=1001, reason=The web application is stopping]
+2024-12-08 21:44:08 [main] INFO  c.e.t.TicketManagerApplication - Starting TicketManagerApplication using Java 22.0.2 with PID 15120 (C:\Users\Pramesh\Desktop\IIT CW\ticketManager\target\classes started by Pramesh in C:\Users\Pramesh\Desktop\IIT CW\ticketManager)
+2024-12-08 21:44:08 [main] INFO  c.e.t.TicketManagerApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-08 21:44:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-12-08 21:44:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 1 MongoDB repository interface.
+2024-12-08 21:44:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-08 21:44:09 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-08 21:44:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-08 21:44:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-08 21:44:10 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 21:44:10 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1598 ms
+2024-12-08 21:44:10 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "ticketing-app-cluster"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/22.0.2+9-70"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='ticketingapp', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5eb87338, com.mongodb.Jep395RecordCodecProvider@2b999ee8, com.mongodb.KotlinCodecProvider@31ab1e67]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=ticketing-app-cluster.ippit.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi6sw-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='ticketing-app-cluster', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2024-12-08 21:44:10 [cluster-ClusterId{value='6755c5d21cda6351d0e2fa12', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017 to client view of cluster
+2024-12-08 21:44:10 [cluster-ClusterId{value='6755c5d21cda6351d0e2fa12', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 to client view of cluster
+2024-12-08 21:44:10 [cluster-ClusterId{value='6755c5d21cda6351d0e2fa12', description='ticketing-app-cluster'}-srv-ticketing-app-cluster.ippit.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017 to client view of cluster
+2024-12-08 21:44:10 [main] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Patterns [/ticketing-websocket] in 'webSocketHandlerMapping'
+2024-12-08 21:44:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-08 21:44:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-08 21:44:11 [main] INFO  c.e.t.TicketManagerApplication - Started TicketManagerApplication in 3.606 seconds (process running for 4.973)
+2024-12-08 21:44:11 [cluster-ClusterId{value='6755c5d21cda6351d0e2fa12', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=420870500, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-c'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=6740a6bd74a7bde477b7bd6c, counter=3}, lastWriteDate=Sun Dec 08 21:44:10 IST 2024, lastUpdateTimeNanos=1161641870010200}
+2024-12-08 21:44:11 [cluster-ClusterId{value='6755c5d21cda6351d0e2fa12', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=370604300, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-b'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000001d, setVersion=4, topologyVersion=TopologyVersion{processId=6740a0d43236505b381bf6db, counter=6}, lastWriteDate=Sun Dec 08 21:44:10 IST 2024, lastUpdateTimeNanos=1161641870010300}
+2024-12-08 21:44:11 [cluster-ClusterId{value='6755c5d21cda6351d0e2fa12', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=370828300, minRoundTripTimeNanos=0, setName='atlas-1bi6sw-shard-0', canonicalAddress=ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, hosts=[ticketing-app-cluster-shard-00-00.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017, ticketing-app-cluster-shard-00-02.ippit.mongodb.net:27017], passives=[], arbiters=[], primary='ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='asia-south1-a'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='GCP'}, Tag{name='region', value='ASIA_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=4, topologyVersion=TopologyVersion{processId=67409d997261816d1af332e5, counter=4}, lastWriteDate=Sun Dec 08 21:44:10 IST 2024, lastUpdateTimeNanos=1161641870010200}
+2024-12-08 21:44:11 [cluster-ClusterId{value='6755c5d21cda6351d0e2fa12', description='ticketing-app-cluster'}-ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ticketing-app-cluster-shard-00-01.ippit.mongodb.net:27017 with max election id 7fffffff000000000000001d and max set version 4
+2024-12-08 21:44:13 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 21:44:13 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 21:44:13 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-08 21:44:18 [http-nio-8080-exec-3] INFO  c.e.ticketManager.util.GlobalLogger - {nethmika=5, priyashan=2, lakmina=4, Tharindu=5, Kusal=2, Pathum=4}
+2024-12-08 21:44:39 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@76a1146d
+2024-12-08 21:44:39 [http-nio-8080-exec-5] DEBUG o.s.w.s.s.s.WebSocketHttpRequestHandler - GET /ticketing-websocket
+2024-12-08 21:44:39 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.LoggingWebSocketHandlerDecorator - New StandardWebSocketSession[id=5f47138b-402b-3a40-3006-f39098683754, uri=ws://localhost:8080/ticketing-websocket]

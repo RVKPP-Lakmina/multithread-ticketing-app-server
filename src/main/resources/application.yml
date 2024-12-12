@@ -3,3 +3,8 @@ spring:
     mongodb:
       uri: mongodb+srv://ticketingapp:ticketingapp@ticketing-app-cluster.ippit.mongodb.net/?retryWrites=true&w=majority&appName=ticketing-app-cluster
       database: ticketingapp
+
+cors:
+  allowed:
+    origins: "http://localhost:5173"
+    methods: "GET,POST,PUT,DELETE,OPTIONS"

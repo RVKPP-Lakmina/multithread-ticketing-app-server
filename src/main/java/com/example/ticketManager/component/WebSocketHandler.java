@@ -1,5 +1,12 @@
 package com.example.ticketManager.component;
 
+import com.example.ticketManager.component.implementations.ActionHandlerFactory;
+import com.example.ticketManager.component.interfaces.ActionHandler;
+import com.example.ticketManager.service.TicketingService;
+import com.example.ticketManager.util.Logger;
+import com.example.ticketing.util.interfaces.IEventLogger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -14,17 +21,42 @@ import java.util.Set;
 public class WebSocketHandler extends TextWebSocketHandler {
 
     private final Set<WebSocketSession> sessions = Collections.synchronizedSet(new HashSet<>());
+    private final TicketingService ticketingService;
+    private final IEventLogger logger;
+
+    @Autowired
+    WebSocketHandler(@Lazy TicketingService ticketingService) {
+        this.ticketingService = ticketingService;
+        logger = new Logger(this);
+    }
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) {
         sessions.add(session); // Add the session to the active sessions set
-        System.out.println("Connection established: " + session.getId());
+        logger.log("Connected! HandShake!!");
     }
 
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
-        System.out.println("Message received: " + message.getPayload());
-        session.sendMessage(new TextMessage("Echo: " + message.getPayload()));
+        String payload = message.getPayload();
+        System.out.println("Message received: " + payload);
+
+        String[] parts = payload.split(":", 2);
+        if (parts.length < 2) {
+            logger.error("Invalid message format");
+            return;
+        }
+
+        String action = parts[0];
+        String[] params = parts[1].split(",");
+
+        ActionHandler actionHandler = ActionHandlerFactory.create(action, ticketingService, logger);
+
+        if (actionHandler != null) {
+            actionHandler.handle(params);
+        } else {
+            logger.error("Unknown action: " + action);
+        }
     }
 
     @Override

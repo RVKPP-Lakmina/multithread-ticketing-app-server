@@ -1,17 +1,18 @@
 package com.example.ticketing.controller;
 
+import com.example.ticketManager.util.GlobalLogger;
 import com.example.ticketing.model.Customer;
 import com.example.ticketing.controller.interfaces.TicketingSystemSimulator;
 import com.example.ticketing.model.ConcurrentTicketStore;
 import com.example.ticketing.model.User;
 import com.example.ticketing.model.Vendor;
+import com.example.ticketing.stores.Constants;
 import com.example.ticketing.stores.Store;
 import com.example.ticketing.util.LoggerService;
 import com.example.ticketing.util.Util;
 import com.example.ticketing.util.interfaces.IEventLogger;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
@@ -19,16 +20,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class SimulationTask implements TicketingSystemSimulator {
-    private static final String VENDOR_PREFIX = "vendor";
-    private static final String CUSTOMER_PREFIX = "customer";
-
     private final ConcurrentHashMap<String, Runnable> taskDefinitions;
     private final ConcurrentTicketStore ticketPool;
     private ExecutorService executorService;
     private final ConcurrentHashMap<String, Future<?>> taskMap;
-    private final HashMap<String, String> users;
+    private final HashMap<String, User> users;
     private final IEventLogger logger;
-    private boolean isRunning;
+    private String VENDOR_PREFIX;
+    private String CUSTOMER_PREFIX;
+    private boolean isBackendService;
 
     public SimulationTask(int initialTickets, int maxCapacity) {
         this(initialTickets, maxCapacity, new LoggerService());
@@ -40,22 +40,29 @@ public class SimulationTask implements TicketingSystemSimulator {
         this.executorService = Executors.newCachedThreadPool();
         this.taskMap = new ConcurrentHashMap<>();
         this.users = new HashMap<>();
-        this.isRunning = false;
         this.taskDefinitions = new ConcurrentHashMap<>();
+        this.VENDOR_PREFIX = Constants.getVendorPrefix();
+        this.CUSTOMER_PREFIX = Constants.getCustomerPrefix();
+    }
+
+    public SimulationTask(int initialTickets, int maxCapacity, IEventLogger logger, boolean isBackendService) {
+        this(initialTickets, maxCapacity, logger);
+        this.isBackendService = isBackendService;
     }
 
     public void startTask() {
-        if (isRunning) {
-            System.out.println("Simulation is already running.");
+        if (Store.isIsRunning()) {
+            logger.error("Simulation is already running.");
             return;
         }
         executorService = Executors.newCachedThreadPool();
 
         if (users.isEmpty()) {
-            logger.log("No Available active Users.");
+            logger.error("No Available active Users. Configure Users at First!!");
+            return;
         }
 
-        isRunning = true;
+        Store.setIsRunning(true);
 
         // Resume tasks
         taskDefinitions.forEach((id, task) -> {
@@ -63,53 +70,101 @@ public class SimulationTask implements TicketingSystemSimulator {
             taskMap.put(id, future);
         });
 
-        System.out.println("Simulation started. Resumed all pending tasks.");
+        logger.log("Simulation started. Resumed all pending tasks.");
     }
 
     public void stopTask() {
-        if (!isRunning) {
-            System.out.println("Simulation is not running.");
+        if (!Store.isIsRunning()) {
+            logger.log("Simulation is not running.");
             return;
         }
         taskMap.forEach((id, future) -> future.cancel(true)); // Stop all active tasks
         taskMap.clear(); // Keep task definitions for resuming
         executorService.shutdownNow(); // Shut down the executor service
         executorService = null;
-        isRunning = false;
-        System.out.println("Simulation stopped. All tasks paused.");
+        Store.setIsRunning(false);
+        logger.log("Simulation stopped. All tasks paused.");
     }
 
     public void addVendor(String name, int rate) {
-        User user = createUser(name, VENDOR_PREFIX, rate);
+        User user = createUser(name, VENDOR_PREFIX, rate, null);
         assert user != null;
-        addTask(user.getId(), () -> new Vendor(ticketPool, rate, logger, true, user));
+
+        Vendor vendor = new Vendor(ticketPool, rate, logger, this.isBackendService, user);
+
+        if (isBackendService) {
+            vendor.setBackEndService(true);
+        }
+
+        addTask(user.getId(), () -> vendor);
+    }
+
+    public void addVendor(String id, String name, int rate) {
+        User user = createUser(name, VENDOR_PREFIX, rate, id);
+        assert user != null;
+        Vendor vendor = new Vendor(ticketPool, rate, logger, this.isBackendService, user);
+
+        if (isBackendService) {
+            vendor.setBackEndService(true);
+        }
+
+        addTask(user.getId(), () -> vendor);
     }
 
     public void addCustomer(String name, int rate) {
-        User user = createUser(name, CUSTOMER_PREFIX, rate);
+        User user = createUser(name, CUSTOMER_PREFIX, rate, null);
         assert user != null;
-        addTask(user.getId(), () -> new Customer(ticketPool, rate, logger, true, user));
+        Customer customer = new Customer(ticketPool, rate, logger, this.isBackendService, user);
+
+        if (isBackendService) {
+            customer.setBackEndService(true);
+        }
+
+        addTask(user.getId(), () -> customer);
     }
 
-    private User createUser(String name, String prefix, int rate) {
+    public void addCustomer(String id, String name, int rate) {
+        User user = createUser(name, CUSTOMER_PREFIX, rate, id);
+        assert user != null;
+
+        Customer customer = new Customer(ticketPool, rate, logger, this.isBackendService, user);
+
+        if (isBackendService) {
+            customer.setBackEndService(true);
+        }
+
+        addTask(user.getId(), () -> customer);
+    }
+
+    private User createUser(String name, String prefix, int rate, String id) {
         String upperCase = prefix.substring(0, prefix.length() - 1).toUpperCase();
+
         if (users.containsValue(name)) {
-            System.out.println(upperCase + " with name " + name + " already exists.");
+            logger.error(upperCase + " with name " + name + " already exists.");
             return null;
         }
-        String id = prefix + "-" + Util.generateUniqueKey();
-        users.put(id, name);
 
-        System.out.println(upperCase + " added with ID: " + id + ", rate: " + rate + " tickets/sec");
+        User taskUser;
 
-        return new User(name, id, rate);
+        if(users.containsKey(id)){
+            taskUser = users.get(id);
+            taskUser.setActive(true);
+
+        }else{
+            id = id != null ? id : prefix + "-" + Util.generateUniqueKey();
+            taskUser = new User(name, id, rate, prefix, true);
+            users.put(id, taskUser);
+        }
+
+        logger.log(upperCase + " added with ID: " + id + ", rate: " + rate + " tickets/sec", taskUser);
+        return taskUser;
     }
 
     private void addTask(String id, RunnableSupplier taskSupplier) {
         Runnable task = taskSupplier.get();
         taskDefinitions.put(id, task); // Store task definition
 
-        if (isRunning) {
+        if (Store.isIsRunning()) {
             Future<?> future = executorService.submit(task);
             taskMap.put(id, future); // Start task immediately if running
         }
@@ -124,31 +179,44 @@ public class SimulationTask implements TicketingSystemSimulator {
     }
 
     private void removeTask(String id, String prefix) {
-        Future<?> future = taskMap.remove(id); // Remove active task
-        taskDefinitions.remove(id); // Remove task definition for resuming
-        users.remove(id); // Remove from user list
 
-        if (future != null) {
-            future.cancel(true); // Interrupt the task
-            System.out.println(prefix.substring(0, prefix.length() - 1).toUpperCase() + " with ID " + id + " removed.");
-        } else {
-            System.out.println("No " + prefix.substring(0, prefix.length() - 1).toUpperCase() + " found with ID " + id);
+        if(!taskMap.containsKey(id) && !users.containsKey(id)){
+            logger.error("No" + id + ": User or Active task found.");
         }
+
+        Future<?> future = taskMap.remove(id);
+
+        if(future == null){
+            logger.error("No" + id + ": No active task found.");
+            return;
+        }
+        taskDefinitions.remove(id);
+        future.cancel(true); // Interrupt the task
+
+        User user = users.get(id);
+        user.setActive(false);
+
+        logger.log("User is Removed: " + id, user);
     }
 
     public void stopSimulation() {
         executorService.shutdownNow(); // Interrupt all threads
-        System.out.println("Simulation stopped.");
+        logger.log("Simulation stopped.");
     }
 
     public void shutdownSystem() {
-        if (executorService != null) {
-            taskMap.clear();
-            Store.clear();
-            users.clear();
-            executorService.shutdownNow();
-            logger.stop();
-            System.out.println("System shut down.");
+        try {
+            if (executorService != null) {
+                taskMap.clear();
+                Store.clear();
+                users.clear();
+                logger.stop();
+                Thread.sleep(1000);
+                executorService.shutdownNow();
+                System.out.println("System shut down.");
+            }
+        } catch (InterruptedException e) {
+            GlobalLogger.logError("SimulationTask | shutdownSystem | Simulation interrupted", e);
         }
     }
 
@@ -176,11 +244,11 @@ public class SimulationTask implements TicketingSystemSimulator {
         Map<String, String> customerList = new HashMap<>();
         Map<String, Map<String, String>> userList = new HashMap<>();
 
-        users.forEach((id, name) -> {
+        users.forEach((id, user) -> {
             if (id.startsWith(VENDOR_PREFIX)) {
-                vendorList.put(id, name);
+                vendorList.put(id, user.getName());
             } else if (id.startsWith(CUSTOMER_PREFIX)) {
-                customerList.put(id, name);
+                customerList.put(id, user.getName());
             }
         });
 

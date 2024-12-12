@@ -9,6 +9,7 @@ public class Store {
     private static final Queue<Ticket> tickets = new ConcurrentLinkedQueue<Ticket>();
     private static int totalTickets;
     private static int maxCapacity;
+    private static boolean isRunning = false;
 
 
     public static Queue<Ticket> ticketsQueue() {
@@ -29,6 +30,14 @@ public class Store {
 
     public static void setTotalTickets(int totalTickets) {
         Store.totalTickets = totalTickets;
+    }
+
+    public static boolean isIsRunning() {
+        return isRunning;
+    }
+
+    public static void setIsRunning(boolean isRunning) {
+        Store.isRunning = isRunning;
     }
 
     public static void clear() {
