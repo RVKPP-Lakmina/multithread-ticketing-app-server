@@ -1,9 +1,15 @@
 {
-  "vendors" : [ ],
+  "vendors" : [ {
+    "id" : null,
+    "name" : "mindi",
+    "rate" : 3,
+    "prefix" : null,
+    "active" : false
+  } ],
   "customers" : [ {
     "id" : null,
-    "name" : "pramesh",
-    "rate" : 10,
+    "name" : "shan",
+    "rate" : 2,
     "prefix" : null,
     "active" : false
   } ]
